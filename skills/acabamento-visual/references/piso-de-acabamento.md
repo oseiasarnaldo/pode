@@ -70,6 +70,51 @@ Não é fundo com imagem, é uma pilha, cada uma com z-index e trabalho próprio
 **Três radiais e não uma.** Uma só lê como degradê de banco de imagem. Três, em
 posições e opacidades diferentes (.20, .17, .10), leem como luz de estúdio.
 
+### 1b · Continuidade: o tratamento chega na última dobra
+
+**O defeito mais comum não é ausência, é desistência.** O acabamento inteiro
+aparece no topo e vai sumindo conforme a página desce: as duas primeiras dobras
+têm textura, luz e entrada, e da metade pra baixo sobra texto sobre fundo liso,
+parado.
+
+Acontece porque a atenção acaba antes da página, e porque **contagem não vê
+distribuição**: uma página com 37 revelações pode ter as 37 no hero.
+
+> **O piso é por dobra, não por página.** Toda dobra precisa de matéria, de
+> luz e de entrada, ou de um motivo escrito pra não ter.
+
+Três regras que resolvem na prática:
+
+1. **Percorra as dobras de baixo pra cima na hora de auditar.** É lá que o
+   tratamento morre, e é lá que ninguém olha.
+2. **O rodapé conta como dobra.** Ele é o último frame de quem leu tudo, e é
+   onde a página quase sempre entrega fundo chapado sem nada.
+3. **Olhe a densidade, não só a presença.** Uma página medida de verdade tinha
+   entrada em todas as dobras e mesmo assim parecia morrer no fim, porque a
+   contagem por dobra era `5, 8, 8, 8, 2, 3, 4`: o terço final tinha menos da
+   metade do resto. Presente não é o bastante, tem que ser **parelho**.
+
+#### Movimento ambiente também é contínuo
+
+Duas coisas diferentes se confundem aqui, e a segunda é a que quase sempre
+falta:
+
+| Tipo | O que é | Onde costuma estar |
+|---|---|---|
+| **Entrada** | o bloco aparece quando entra na tela | espalhada, se você lembrou |
+| **Vida** | movimento que continua acontecendo: fumaça derivando, parallax, brilho lento num selo, marquee, hover que responde | **só no topo** |
+
+Uma página com fumaça de 46 segundos no hero e nada acontecendo dali pra baixo
+lê como se tivesse acabado a bateria no meio. Não precisa de outra animação
+grande: **hover nos cards, um selo que gira devagar, um marcador que pulsa
+discreto** já mantêm a página viva.
+
+Regra: se a dobra de abertura tem vida, **pelo menos mais duas dobras precisam
+ter**, e uma delas na metade de baixo.
+
+O medidor no fim deste arquivo mostra dobra a dobra, justamente pra isso. Uma
+linha `sem nada` na tabela é defeito, não sobra.
+
 ### 2 · Entrada no scroll em todo bloco de conteúdo
 
 Um `IntersectionObserver` só pra página inteira, com o índice vindo da posição
@@ -276,6 +321,11 @@ existe de verdade no CSS aplicado, e é o mesmo espírito do auditor de contrast
 O piso é mínimo, não meta. A LP de referência entrega de duas a três vezes cada
 número.
 
+**E a segunda tabela é a que mais pega defeito:** a cobertura dobra a dobra.
+Ela responde se cada dobra tem entrada, matéria e luz, e lista as que estão
+nuas. Uma página pode passar em todos os totais e ainda ter as três últimas
+dobras sem nada, que é o defeito mais comum de todos.
+
 ---
 
 ## Quando o piso não se aplica
@@ -291,6 +341,10 @@ abaixo por não ter pensado nisso.
 - [ ] Dobra de abertura com quatro camadas nomeadas e z-index explícito
 - [ ] Três radiais de luz na abertura, em posições e opacidades diferentes
 - [ ] `data-reveal` nos blocos de conteúdo, cascata de 110ms
+- [ ] **Nenhuma dobra sem tratamento**, do hero ao rodapé, conferido dobra a dobra
+- [ ] Densidade de entrada parelha, sem despencar no terço final
+- [ ] Movimento de vida em pelo menos três dobras, uma delas na metade de baixo
+- [ ] Auditoria feita de baixo pra cima, que é onde o acabamento morre
 - [ ] `.js` na regra de ocultar, posta pelo próprio script
 - [ ] Máscara em toda imagem que encosta no fundo
 - [ ] Grão na página, entre 2 e 8%

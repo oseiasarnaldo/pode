@@ -103,7 +103,9 @@ luz. Catálogo não obriga nada, então existe um piso.
 2. **Três radiais** de luz na abertura, não uma. Uma só lê como degradê de
    banco de imagem
 3. **Entrada no scroll** (`data-reveal`) nos blocos de conteúdo, cascata de
-   110ms
+   110ms, **em todas as dobras e não só nas primeiras**. O defeito mais comum
+   não é ausência, é desistência: o acabamento aparece no topo e some conforme
+   a página desce. Audite de baixo pra cima
 4. **Máscara** em toda imagem que encosta no fundo
 5. **Grão** na página inteira, entre 2 e 8%, e **textura de matéria** onde a
    dobra pede corpo: madeira, papel, concreto, tecido. Fundo liso é o que
