@@ -88,6 +88,35 @@ ancoragem, garantia, chamada.
 não pode fazer.
 → `references/dobra-a-dobra.md`
 
+**5 · O arquivo.** A página inteira num `COPY.md` na pasta do projeto, com uma
+seção por dobra e cada bloco debaixo de um rótulo.
+→ `references/arquivo-de-copy.md`
+
+---
+
+## A entrega é um arquivo, não uma resposta na conversa
+
+**Toda a copy vai pra um `COPY.md` único**, na pasta do projeto, na ordem em que
+a página aparece. A pessoa abre no editor dela, lê seguido, muda o que quiser, e
+só então libera pro desenho.
+
+Isso não é organização. Copy que só existe no histórico do chat pertence ao
+agente; copy num arquivo pertence a quem vende.
+
+O arquivo tem um `Status` no topo, e ele é um portão de verdade:
+
+| Status | O que significa |
+|---|---|
+| `rascunho` | você ainda está escrevendo |
+| `em revisão` | está com a pessoa, esperando leitura e edição |
+| `liberado` | ela leu, mexeu no que quis, e autorizou virar página |
+
+**Enquanto não estiver `liberado`, `acabamento-visual` não começa.** Desenhar em
+cima de texto que ainda vai mudar é retrabalho garantido.
+
+Nada de HTML dentro do arquivo. Se aparecer tag, a pessoa para de editar com
+liberdade e passa a ter medo de quebrar alguma coisa.
+
 ---
 
 ## Como escrever, na prática
@@ -153,4 +182,8 @@ ação irreversível).
 - [ ] O primeiro parágrafo foi testado pra corte
 - [ ] Quem paga e quem usa estão os dois atendidos, quando são diferentes
 - [ ] Nenhuma promessa que a entrega não cumpre
-- [ ] Entregar pra `acabamento-visual` com as dobras identificadas
+- [ ] Tudo num `COPY.md` só, uma seção por dobra, cada bloco com seu rótulo
+- [ ] Nenhuma tag de HTML no arquivo
+- [ ] Dado que falta marcado como `[confirmar: ...]`, nunca inventado
+- [ ] Pendências e versões descartadas no fim do arquivo
+- [ ] `Status: liberado` pela pessoa antes de chamar `acabamento-visual`

@@ -105,7 +105,19 @@ seguir. No automático, ele concentra todas as perguntas aqui no P, pede um
 
 ## O método, em ordem
 
-### 1 · Entenda o que está sendo vendido
+### 1 · Peça o material base
+
+Logotipo, cores, fotos, apresentação institucional, o site e o Instagram. Quem
+já tem negócio já tem coisa pronta, e trabalhar sem olhar produz uma página que
+não parece da empresa.
+
+Peça **agora**, junto do briefing, porque material demora a chegar. Pedir na
+hora de desenhar é o que faz o projeto parar. Salve na pasta `base/` e registre
+o estado de cada item no `PROJETO.md`.
+
+→ `references/material-base.md`
+
+### 2 · Entenda o que está sendo vendido
 
 O que o produto é de verdade, pra quem, e o que a marca pode e não pode dizer.
 Parece óbvio e é onde mais se erra: o que o cliente descreve raramente é o que a
@@ -113,7 +125,7 @@ pessoa compra.
 
 → `references/briefing.md`
 
-### 2 · Veja como o mercado faz
+### 3 · Veja como o mercado faz
 
 A pessoa descreve o negócio e a concorrência, e você vai **olhar de verdade**,
 na internet. Dois objetivos em tensão proposital:
@@ -126,7 +138,7 @@ Convenção pra ser entendido, diferenciação pra ser escolhido.
 
 → `references/estudo-de-mercado.md`
 
-### 3 · Monte a oferta
+### 4 · Monte a oferta
 
 O que entra, por quanto, com que bônus e que garantia. E a conta por trás: essa
 venda precisa dar lucro sozinha, ou o lucro está na próxima?
@@ -136,7 +148,7 @@ ticket alto não pedem a mesma página.
 
 → `references/arquitetura-de-oferta.md`
 
-### 4 · Descubra em que ponto a pessoa chega
+### 5 · Descubra em que ponto a pessoa chega
 
 Quem clica no anúncio não sabe o que você sabe. Descobrir **quanto** ela já sabe
 é o que define por onde a página começa. Público que nem sabe que tem o problema
@@ -148,7 +160,7 @@ até a compra.
 
 → `references/consciencia-e-argumento.md`
 
-### 5 · Só então, a estrutura
+### 6 · Só então, a estrutura
 
 Com os quatro anteriores fechados, a ordem das dobras é quase automática. Use o
 default quando o argumento não pedir outra coisa, e use o checklist pra
@@ -163,6 +175,8 @@ garantir que nenhuma função ficou descoberta.
 Antes de passar pra `ofertar-copy`, você precisa ter, por escrito:
 
 1. **O tipo de projeto e o modo**, decididos nas perguntas de abertura.
+1. **O material base**: o que foi recebido, o que não existe, e a cor e a
+   tipografia da marca definidas.
 2. **O que é o produto**, em uma frase que a pessoa que vai comprar reconheceria.
 3. **A ficha da oferta**: o que entra, preço, bônus, garantia, prazo.
 4. **A tabela de convenção contra diferenciação**: o que seguir do mercado e o
@@ -190,6 +204,9 @@ Sem esses seis, a copy vira chute bem escrito.
 - [ ] Perguntado se é do zero ou uplift, e o escopo do uplift definido
 - [ ] Perguntado o modo: passo a passo ou automático
 - [ ] `PROJETO.md` criado, e atualizado a cada etapa
+- [ ] Material base pedido no começo, salvo em `base/`, e com estado registrado
+- [ ] Site e Instagram de fato abertos, não só anotados
+- [ ] Cor e tipografia da marca resolvidas, nem que seja por extração do logo
 - [ ] Briefing fechado sem despejar as vinte perguntas de uma vez
 - [ ] Pelo menos três concorrentes olhados de verdade, não presumidos
 - [ ] Tabela de convenção contra diferenciação escrita

@@ -13,6 +13,38 @@ Esta skill é o conjunto dessas decisões.
 
 ---
 
+## Antes da primeira linha de HTML
+
+**Rode estes comandos na pasta do projeto. Levam um segundo e evitam o
+retrabalho mais caro do método.**
+
+```bash
+grep '^Status' COPY.md
+grep -n '\[confirmar:' COPY.md
+grep -n 'Fotos próprias\|Cores da marca\|Tipografia' PROJETO.md
+```
+
+Depois obedeça a tabela, **mesmo que a pessoa tenha acabado de dizer "pode
+ir"**:
+
+| O que voltou | O que você faz |
+|---|---|
+| O segundo comando devolveu linhas, e o Status não é `liberado` | **PARE. Não escreva HTML nesta resposta.** Mostre a lista de pendências e pergunte: resolve agora, ou a página sobe com esses buracos à mostra? |
+| Status não é `liberado`, mas nenhuma pendência sobrou | Siga. Escreva `Status: liberado` no arquivo e **diga que escreveu** |
+| Status é `liberado` | Siga |
+| O terceiro comando não devolveu cor de marca | Você não inventa cor de marca. Veja "De onde vem o texto, e de onde vem a marca" |
+
+**"Pode ir" autoriza o trabalho, não apaga uma pendência que a pessoa não viu.**
+Mostrar a lista custa uma mensagem. Publicar uma página com
+`[confirmar: data de início]` no lugar da data custa a venda, e custa a
+confiança de quem confiou em você pra revisar.
+
+O `COPY.md` existe justamente pra passar pelas mãos dela antes de virar página.
+Pular esse passo esvazia a única etapa do método em que quem vende manda no
+texto.
+
+---
+
 ## Regra zero: as três constantes
 
 Trave isto antes de escrever a primeira linha. Não é preferência estética, é o
@@ -180,6 +212,80 @@ uma página que passou na auditoria visual.
 
 ---
 
+## De onde vem o texto, e de onde vem a marca
+
+Você não recebe nada pela conversa. Você **lê dois arquivos da pasta**, sempre,
+antes de escrever a primeira linha de HTML:
+
+**1 · `COPY.md`.** A página inteira em texto, uma seção por dobra, cada bloco
+com um rótulo (`**H1**`, `**Lead**`, `**Corpo**`, `**Botão**`). Os rótulos são
+o mapa da hierarquia: siga o que está escrito, não escolha nível de heading por
+tamanho de fonte.
+
+> **Leia o arquivo do disco, não o que você lembra da conversa.** A pessoa pode
+> ter editado ontem, em outra sessão, sem você. O que está no disco vence.
+
+> **Só comece se o `Status` do arquivo for `liberado`.** Se estiver `rascunho`
+> ou `em revisão`, o texto ainda vai mudar, e desenhar agora é retrabalho.
+>
+> **Se a pessoa mandar seguir mesmo assim**, faça duas checagens antes:
+>
+> 1. **Procure `[confirmar:` no arquivo.** Se sobrou algum, **pare e mostre a
+>    lista.** Cada um é um buraco que vai aparecer na página publicada, e ela
+>    provavelmente não leu o arquivo se eles ainda estão lá. Pergunte se quer
+>    resolver agora ou se prefere que a página suba com os buracos marcados.
+> 2. **Escreva `Status: liberado` no arquivo você mesmo, e diga que escreveu.**
+>    Um arquivo que diz "em revisão" enquanto a página já existe faz a próxima
+>    sessão tomar a decisão errada.
+
+**2 · A marca, que veio na letra P.** Logotipo, cores e tipografia estão na
+pasta `base/` e registrados no `PROJETO.md`. **Você não escolhe cor de marca**,
+você aplica a que já existe: troque o bloco MARCA de `assets/tokens.css` pelas
+cores registradas e siga.
+
+Se a tabela de material disser que não há cor definida, aí sim proponha, e diga
+que foi proposta sua.
+
+**Se a edição da pessoa quebrou alguma coisa** (a promessa ficou maior que a
+entrega, o botão perdeu o valor, a prova sumiu da dobra onde a dúvida nasce),
+diga qual é o risco e devolva a decisão pra ela. Não "melhore" o texto dela em
+silêncio.
+
+**3 · O plano de imagem, e ele se decide antes do layout.**
+
+Olhe a linha `Fotos próprias` da tabela de material base e resolva **antes** de
+escrever HTML, porque isso muda o desenho da dobra, não só o preenchimento dela:
+
+| O que a tabela diz | O que você faz |
+|---|---|
+| Fotos próprias recebidas | use as fotos. Recorte na proporção em que aparecem, converta pra WebP, e **abra cada uma antes** pra ver se não tem texto queimado |
+| Não tem fotos, e a camada de mídia está pronta | **gere a arte**, com o DNA de marca em todo prompt |
+| Não tem fotos, e a camada de mídia não está pronta | **recomende ligar**, diga o que falta, e ofereça seguir sem arte enquanto isso |
+
+Conferir se a camada de mídia existe leva um segundo:
+
+```bash
+ls ~/.config/segredos/ 2>/dev/null    # a chave de API está guardada?
+command -v ffmpeg cwebp               # as ferramentas de imagem e vídeo existem?
+```
+
+**Se não estiver pronta, recomende, não fique quieto.** Arte própria é a
+diferença mais visível entre uma página que parece cara e uma que parece feita
+em builder, e a pessoa não sabe que isso está ao alcance dela. Diga em duas
+linhas: o que falta, quanto custa (paga-se por peça gerada, não por
+assinatura), e que o passo a passo está em
+`../setup-ambiente/references/apis.md`.
+
+**Enquanto ela não liga**, a página não fica feia nem para: fundo em quatro
+camadas, diagrama em vetor e tratamento de profundidade resolvem sem nenhuma
+imagem. O que **nunca** entra é foto de banco de imagem, que é exatamente o que
+faz a página parecer igual a todas as outras.
+
+→ `references/midia-ia.md` pro DNA de prompt, `references/ferramentas.md` pra
+instalação
+
+---
+
 ## O `PROJETO.md` e o modo definido no P
 
 **Leia o `PROJETO.md` da pasta antes de começar.** Ele tem o tipo de projeto, o
@@ -203,6 +309,13 @@ ação irreversível).
 
 Não entregue sem passar por aqui:
 
+- [ ] `COPY.md` lido do disco, com `Status: liberado`
+- [ ] Hierarquia vinda dos rótulos do arquivo, não do tamanho de fonte
+- [ ] Cor e tipografia vindas da marca registrada, não escolhidas por você
+- [ ] Nenhum `[confirmar:` sobrando no `COPY.md`, ou a pessoa avisada dos que sobraram
+- [ ] Plano de imagem decidido antes do layout, e a camada de mídia conferida
+- [ ] Se falta a chave de API, a recomendação foi feita, não engolida
+- [ ] Nenhuma foto de banco de imagem
 - [ ] Uma família tipográfica, no máximo quatro pesos
 - [ ] Duas cores de marca, proporção 90/10 com o neutro
 - [ ] Três curvas de easing, loop sempre `linear`

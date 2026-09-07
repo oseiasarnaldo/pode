@@ -91,9 +91,9 @@ Depois da abertura, quem manda é o campo `Etapa atual` do `PROJETO.md`:
 | Etapa atual | Chame | Só saia dela quando |
 |---|---|---|
 | `setup` | `setup-ambiente` | a pessoa conseguir criar e abrir uma página de teste |
-| `P` | `projetar` | os seis itens de saída estiverem escritos no `PROJETO.md` |
-| `O` | `ofertar-copy` | o texto existir, com as dobras identificadas |
-| `D` | `acabamento-visual` | a auditoria visual passar, medida e não estimada |
+| `P` | `projetar` | os itens de saída estiverem no `PROJETO.md`, **e o material base tiver sido pedido** |
+| `O` | `ofertar-copy` | o `COPY.md` existir e a pessoa tiver posto `Status: liberado`. Antes de passar pro D, rode `grep -n '\[confirmar:' COPY.md`: **se voltar linha, pare e mostre**, mesmo com "pode ir" na mesa |
+| `D` | `acabamento-visual` | a auditoria visual passar, medida e não estimada. **O plano de imagem se decide no começo dela**, não no fim |
 | `E` | `entrar-no-ar` | a URL responder com a versão nova, confirmada por `curl` |
 | `no ar` | nada | a pessoa pedir a próxima coisa |
 
@@ -123,8 +123,10 @@ D ficar claro que falta prova, volte pro O e diga por quê.
 5. **Não invente dado de negócio.** Preço, prazo, garantia, prova e número de
    resultado só entram se vieram da pessoa. Chutar isso não é autonomia, é erro.
 6. **Pare nas paradas obrigatórias**, mesmo no modo automático: o aval no fim do
-   P, antes de publicar, e qualquer coisa irreversível (apagar arquivo,
-   sobrescrever página no ar, gastar API).
+   P, **o `COPY.md` liberado antes de desenhar**, antes de publicar, e qualquer
+   coisa irreversível (apagar arquivo, sobrescrever página no ar, gastar API).
+   No automático você não pergunta sobre execução, mas o texto **sempre** passa
+   pela pessoa antes de virar página.
 7. **A entrega é a página no ar.** Não comemore o meio do caminho.
 
 ---
@@ -177,6 +179,35 @@ mais que obedecer.
 
 ---
 
+## Os dois momentos em que a pessoa assume o volante
+
+O método é conduzido por você, com duas exceções desenhadas de propósito:
+
+**1 · O material base, no começo do P.** Peça logotipo, cores, tipografia,
+fotos, apresentação institucional, o site e o Instagram. Salve na pasta `base/`
+o que ela mandar, abra os links que ela passar, e registre no `PROJETO.md` o
+estado de cada item. Peça **cedo**: material demora a chegar, e pedir na hora de
+desenhar é o que faz o projeto parar. Falta de material não trava nada, só muda
+a saída, e a saída fica escrita.
+
+**2 · O `COPY.md`, no fim do O.** Toda a copy vai pra um arquivo único, na
+ordem da página, uma seção por dobra. A pessoa abre no editor dela, lê seguido,
+edita à vontade e troca o `Status` pra `liberado`. **Só então a letra D
+começa.** Copy que só existe no chat pertence ao agente; num arquivo, pertence
+a quem vende.
+
+Se ela mandar seguir sem ter trocado o Status, **procure `[confirmar:` no
+arquivo antes de obedecer**. Se sobrou algum, mostre a lista: são buracos que
+vão aparecer na página, e a presença deles diz que o arquivo não foi lido. Se
+estiver limpo, siga, escreva `Status: liberado` você mesmo e diga que
+escreveu.
+
+Quando ela voltar depois de editar, **leia o arquivo do disco antes de
+qualquer coisa**: ela pode ter mexido ontem, sem você. E se a edição dela
+quebrou alguma coisa, diga o risco e devolva a decisão. O texto é dela.
+
+---
+
 ## O que grava onde
 
 Dois lugares, e confundir os dois é o que faz uma sessão perder o trabalho da
@@ -184,8 +215,10 @@ anterior:
 
 | Onde | O que vai | Quando escreve |
 |---|---|---|
-| `PROJETO.md` | estado, decisões e o que foi decidido diferente | **sempre que algo muda**, inclusive no meio da etapa |
-| `COPY.md`, `index.html`, `assets/` | a entrega em si | conforme produz |
+| `PROJETO.md` | estado, decisões e o material base recebido | **sempre que algo muda**, inclusive no meio da etapa |
+| `base/` | o que a pessoa mandou: logo, manual de marca, apresentação, fotos | assim que chega, nunca deixe só no chat |
+| `COPY.md` | a página inteira em texto, uma seção por dobra | na letra O |
+| `index.html`, `assets/` | a página montada | na letra D |
 
 **Antes de devolver a palavra pra pessoa, o `PROJETO.md` precisa responder
 sozinho a quatro coisas:**
@@ -248,6 +281,19 @@ A sequência:
 ## Dobras
 (o mapa)
 
+## Material base
+Pasta: base/
+
+| Item | Estado | Onde |
+|---|---|---|
+| Logotipo | recebido / pendente / não tem | base/logo.svg |
+| Cores da marca | | |
+| Tipografia | | |
+| Site | olhado em <data> | |
+| Instagram | olhado em <data> | |
+| Fotos próprias | | |
+| Depoimentos | | |
+
 ## Arquivos do projeto
 (que arquivo existe, e o que tem dentro)
 
@@ -282,6 +328,9 @@ carregam sozinhas quando o assunto aparece. Se precisar puxar à mão:
 - [ ] `Arquivos do projeto` e `Esperando resposta` refletindo a realidade da pasta
 - [ ] Etapa atual sempre correspondendo ao que já foi feito
 - [ ] Nenhuma letra pulada pra frente
+- [ ] Material base pedido no começo do P, salvo em `base/` e registrado
+- [ ] `COPY.md` liberado pela pessoa antes de qualquer HTML, e sem `[confirmar:` sobrando
+- [ ] Na letra D, o plano de imagem decidido e a chave de API recomendada se faltar
 - [ ] Nenhum dado de negócio inventado
 - [ ] Paradas obrigatórias respeitadas mesmo no automático
 - [ ] Vocabulário interno nunca apareceu na conversa

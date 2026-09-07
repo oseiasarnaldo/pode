@@ -146,13 +146,18 @@ responde à objeção da dobra onde está. Textos e regra em `texto-da-oferta.md
 
 ## Como entregar pra próxima letra
 
-`acabamento-visual` precisa receber o texto **com as dobras identificadas** e a
-hierarquia marcada: o que é título de dobra, o que é lead, o que é corpo, o que
-é rótulo, o que é botão.
+Tudo isto vai pra um **`COPY.md` único** na pasta do projeto, uma seção por
+dobra, cada bloco debaixo de um rótulo em negrito que diz o que ele é: `**H1**`,
+`**Lead**`, `**Corpo**`, `**Botão**`. O formato completo está em
+`arquivo-de-copy.md`.
 
 Texto entregue como bloco corrido força quem desenha a adivinhar a hierarquia, e
 é aí que aparece o `h4` solitário escolhido por tamanho de fonte, que quebra a
 árvore de acessibilidade e derruba a nota agêntica.
+
+E o arquivo existe por outro motivo, que é maior: **a pessoa precisa poder abrir
+o texto e mexer nele sem medo**, antes de virar página. Enquanto o `Status` do
+arquivo não for `liberado`, a letra D não começa.
 
 ---
 
