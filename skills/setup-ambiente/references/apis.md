@@ -1,8 +1,12 @@
 # Chaves de API
 
-Você só precisa disso se for **gerar imagem ou vídeo próprios**. Página com arte
-própria não tem cara de template, e é a diferença mais visível entre uma página
-que parece cara e uma que parece feita em builder.
+**Isto é opcional.** Você só precisa de chave se quiser **gerar imagem ou vídeo
+sob medida**. Página com arte própria tem uma cara que banco de imagem não dá,
+mas ela não é pré-requisito de página boa: o caminho gratuito está em
+`../acabamento-visual/references/imagem-sem-pagar.md`, e resolve a maioria dos
+casos sem nenhuma conta.
+
+Leia este arquivo quando decidir que quer arte gerada, não antes.
 
 ---
 

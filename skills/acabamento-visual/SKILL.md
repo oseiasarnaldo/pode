@@ -259,8 +259,9 @@ escrever HTML, porque isso muda o desenho da dobra, não só o preenchimento del
 | O que a tabela diz | O que você faz |
 |---|---|
 | Fotos próprias recebidas | use as fotos. Recorte na proporção em que aparecem, converta pra WebP, e **abra cada uma antes** pra ver se não tem texto queimado |
+| Não tem fotos, mas dá pra tirar hoje | **peça a foto do celular**. Numa escola ou num curso ela vale mais que qualquer acervo, porque é prova |
 | Não tem fotos, e a camada de mídia está pronta | **gere a arte**, com o DNA de marca em todo prompt |
-| Não tem fotos, e a camada de mídia não está pronta | **recomende ligar**, diga o que falta, e ofereça seguir sem arte enquanto isso |
+| Não tem fotos, e a camada de mídia não está pronta | **não pare, e não empurre a conta.** O caminho gratuito resolve a maioria dos casos: `references/imagem-sem-pagar.md` |
 
 Conferir se a camada de mídia existe leva um segundo:
 
@@ -269,17 +270,26 @@ ls ~/.config/segredos/ 2>/dev/null    # a chave de API está guardada?
 command -v ffmpeg cwebp               # as ferramentas de imagem e vídeo existem?
 ```
 
-**Se não estiver pronta, recomende, não fique quieto.** Arte própria é a
-diferença mais visível entre uma página que parece cara e uma que parece feita
-em builder, e a pessoa não sabe que isso está ao alcance dela. Diga em duas
-linhas: o que falta, quanto custa (paga-se por peça gerada, não por
-assinatura), e que o passo a passo está em
-`../setup-ambiente/references/apis.md`.
+**Se não estiver pronta, apresente as duas saídas, nessa ordem, e sem empurrar
+a paga:**
 
-**Enquanto ela não liga**, a página não fica feia nem para: fundo em quatro
-camadas, diagrama em vetor e tratamento de profundidade resolvem sem nenhuma
-imagem. O que **nunca** entra é foto de banco de imagem, que é exatamente o que
-faz a página parecer igual a todas as outras.
+1. **De graça.** Fundo em quatro camadas, diagrama em vetor, cartão de vidro e
+   textura de ruído resolvem a maioria das páginas sem uma única imagem, e
+   deixam o carregamento mais rápido. Se faltar textura específica, o Openverse
+   devolve acervo CC0 **sem pedir chave nenhuma**. Tudo em
+   `references/imagem-sem-pagar.md`.
+2. **Pagando por peça.** Arte sob medida, coerente em série, feita com o DNA da
+   marca. Custa por imagem gerada, não assinatura, e o passo a passo está em
+   `../setup-ambiente/references/apis.md`.
+
+Diga que a primeira existe **antes** de falar da segunda. Muita gente não vai
+querer ligar faturamento pra fazer uma página, e não precisa: a diferença entre
+página cara e página de template está nas regras desta skill, não na conta de
+API.
+
+O que **nunca** entra, em nenhum dos dois caminhos, é foto de banco de imagem
+com gente sorrindo. É o item 6 dos doze erros, e trocar arte gerada por foto de
+estoque de pessoa não economiza dinheiro: piora a página.
 
 → `references/midia-ia.md` pro DNA de prompt, `references/ferramentas.md` pra
 instalação
@@ -314,7 +324,7 @@ Não entregue sem passar por aqui:
 - [ ] Cor e tipografia vindas da marca registrada, não escolhidas por você
 - [ ] Nenhum `[confirmar:` sobrando no `COPY.md`, ou a pessoa avisada dos que sobraram
 - [ ] Plano de imagem decidido antes do layout, e a camada de mídia conferida
-- [ ] Se falta a chave de API, a recomendação foi feita, não engolida
+- [ ] Se falta a chave de API, o caminho gratuito foi oferecido **antes** do pago
 - [ ] Nenhuma foto de banco de imagem
 - [ ] Uma família tipográfica, no máximo quatro pesos
 - [ ] Duas cores de marca, proporção 90/10 com o neutro
