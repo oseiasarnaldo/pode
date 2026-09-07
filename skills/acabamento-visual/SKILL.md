@@ -107,7 +107,9 @@ luz. Catálogo não obriga nada, então existe um piso.
 4. **Máscara** em toda imagem que encosta no fundo
 5. **Grão** na página inteira, entre 2 e 8%, e **textura de matéria** onde a
    dobra pede corpo: madeira, papel, concreto, tecido. Fundo liso é o que
-   sobra quando ninguém decidiu nada
+   sobra quando ninguém decidiu nada. **A textura cobre a dobra inteira**,
+   como camada em `inset: 0` da própria section: textura numa caixa interna
+   vira retângulo com fundo liso em volta, e fica pior que não ter
 6. **Um conjunto de ícones**, um peso só, em chip: rótulo de item de oferta,
    selo de fechamento, marcador de comparativo. Nunca emoji, nunca duas
    bibliotecas
@@ -255,6 +257,12 @@ ser o que sobrou por falta de plano.
 Escreva o mapa no `PROJETO.md` antes de abrir o HTML:
 
 ```markdown
+## Mapa de matéria
+| Dobra | Matéria | Arquivo |
+|---|---|---|
+| 1 hero | madeira de tampo | assets/img/mat/madeira.webp |
+| 2 cardápio | azulejo | assets/img/mat/azulejo.webp |
+
 ## Mapa de imagem
 | Dobra | Papel | Peça | Origem | Estado |
 |---|---|---|---|---|

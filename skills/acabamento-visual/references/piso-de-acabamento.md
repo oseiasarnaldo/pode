@@ -135,6 +135,84 @@ de "isso foi feito por alguém".
 > **Fundo liso é o que sobra quando ninguém decidiu nada.** Se a dobra está
 > sem textura, foi omissão, não escolha.
 
+#### A série de matérias, uma por projeto
+
+Não é uma textura, é um **conjunto**, gerado ou escolhido de uma vez, com o
+mesmo DNA. Num boteco saíram seis: tampo de madeira, reboco descascado, azulejo,
+papel kraft, fumaça de cozinha e condensação de copo gelado. Somadas, 348 KB em
+WebP.
+
+Registre no `PROJETO.md`, junto do mapa de imagem, **qual matéria vai em qual
+dobra**. É o que impede a página de virar colcha de retalhos, e é o que faz a
+próxima sessão continuar no mesmo mundo:
+
+```markdown
+## Mapa de matéria
+| Dobra | Matéria | Arquivo |
+|---|---|---|
+| 1 hero | madeira de tampo | assets/img/mat/madeira.webp |
+| 2 cardápio | azulejo | assets/img/mat/azulejo.webp |
+| 4 a casa | reboco descascado | assets/img/mat/reboco.webp |
+```
+
+A matéria vem do mundo do negócio, não de um catálogo genérico. Boteco tem
+azulejo e madeira; escola tem papel, giz e caderno; escritório tem concreto e
+vidro. **Se a matéria serviria pra qualquer negócio, ela não é da marca.**
+
+#### Cor de marca sobre textura pede um passo mais fechado
+
+Descoberta de um projeto real, e ela não é óbvia: o vermelho puro da marca
+funcionava no botão e **sufocava** como fundo de dobra com textura por baixo. A
+saída foi separar os dois usos:
+
+| Onde | Que versão | Por quê |
+|---|---|---|
+| Botão, chip, marcador | a cor cheia da marca | ali ela precisa gritar |
+| Fundo de dobra com textura | um passo mais fechada | é o que deixa o texto e o acento respirarem por cima da matéria |
+
+Textura embaixo de cor chapada rouba contraste sem avisar: o olho lê a soma das
+duas, não cada uma. Se a dobra colorida com textura parece "abafada", quase
+sempre é isso.
+
+#### Continuidade: o erro que estraga textura boa
+
+Textura certa aplicada errado fica **pior** que fundo liso, porque a emenda
+denuncia. Três jeitos de quebrar, e os três acontecem:
+
+| Sintoma | Causa | Correção |
+|---|---|---|
+| Retângulo de textura com fundo liso em volta | aplicada num container ou card, não na dobra | a camada é `position: absolute; inset: 0` **na section**, com o conteúdo em `z-index` acima |
+| Grade regular de emendas | `repeat` com imagem que não é seamless | ou arruma o ladrilho, ou troca pra `cover` com máscara |
+| Borda reta onde a textura acaba | `no-repeat` com `background-size` menor que a dobra | `cover`, e **máscara nas bordas** pra ela morrer no fundo |
+
+```css
+/* a textura é camada da DOBRA, e cobre ela inteira */
+.section { position: relative; isolation: isolate; }
+.section .textura {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url("../img/azulejo.webp") center / cover;
+  opacity: .5; filter: saturate(.5) brightness(.9);
+  /* morre nas bordas, em vez de terminar numa linha */
+  mask-image: radial-gradient(120% 100% at 50% 40%, #000 55%, transparent 92%);
+}
+.section > .container { position: relative; z-index: 1; }
+```
+
+**A escala tem que ser a mesma na página inteira.** Se o azulejo tem 60px numa
+dobra e 90px na outra, a matéria "muda de tamanho" e o olho lê como duas
+imagens diferentes coladas. Trave a `background-size` num token e use o mesmo
+em todas.
+
+**Entre duas dobras com a mesma matéria**, escolha um dos dois e assuma: ou a
+textura é **contínua na página inteira** (uma camada só, no elemento que
+envolve tudo), ou cada dobra tem a sua e **a virada é marcada de propósito**
+com um divisor. O que não pode é a mesma textura recomeçar do zero e aparecer a
+costura.
+
+**Como conferir, e não é a olho nu:** capture a tela e faça varredura de pixel
+ao longo das bordas da dobra, procurando salto de cor em linha reta. Zoom
+visual com brilho normal esconde emenda fraca; a varredura não.
+
 ### 4b · Um conjunto de ícones, um peso só
 
 Ícone não é enfeite, é rótulo, e a página inteira precisa dos mesmos. Onde eles
@@ -217,6 +295,9 @@ abaixo por não ter pensado nisso.
 - [ ] Máscara em toda imagem que encosta no fundo
 - [ ] Grão na página, entre 2 e 8%
 - [ ] Textura de matéria nas dobras, mascarada onde o texto mora
+- [ ] Textura cobrindo a dobra inteira, sem retângulo nem borda reta visível
+- [ ] Mesma escala de textura em todas as dobras
+- [ ] Emenda entre dobras texturizadas resolvida: contínua, ou virada marcada
 - [ ] Um conjunto de ícones, um peso, em chip
 - [ ] Sombra em duas camadas, e borda de luz no dark
 - [ ] `svh` e não `vh` na altura de dobra
