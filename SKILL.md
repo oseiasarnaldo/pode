@@ -93,7 +93,7 @@ Depois da abertura, quem manda é o campo `Etapa atual` do `PROJETO.md`:
 | `setup` | `setup-ambiente` | a pessoa conseguir criar e abrir uma página de teste |
 | `P` | `projetar` | os itens de saída estiverem no `PROJETO.md`, **e o material base tiver sido pedido** |
 | `O` | `ofertar-copy` | o `COPY.md` existir e a pessoa tiver posto `Status: liberado`. Antes de passar pro D, rode `grep -n '\[confirmar:' COPY.md`: **se voltar linha, pare e mostre**, mesmo com "pode ir" na mesa |
-| `D` | `acabamento-visual` | a auditoria visual passar, medida e não estimada. **O plano de imagem se decide no começo dela**, não no fim |
+| `D` | `acabamento-visual` | a auditoria visual passar, medida e não estimada. **O mapa de imagem, dobra a dobra, se escreve antes do HTML.** Uma textura de fundo não é o mapa |
 | `E` | `entrar-no-ar` | a URL responder com a versão nova, confirmada por `curl` |
 | `no ar` | nada | a pessoa pedir a próxima coisa |
 
@@ -280,6 +280,9 @@ A sequência:
 
 ## Dobras
 (o mapa)
+
+## Mapa de imagem
+(uma linha por dobra: que peça carrega ela, de onde vem, e o estado)
 
 ## Material base
 Pasta: base/

@@ -103,15 +103,59 @@ amador, e a mais ignorada.
 
 → `references/profundidade.md`
 
-### 4. Componha a mídia com um DNA fixo
+### 4. Faça o mapa de imagem, dobra a dobra, antes do HTML
 
-Se for gerar imagem ou vídeo por IA, escreva **um parágrafo de direção que entra
-em todos os prompts**. É isso que faz peças geradas em momentos diferentes
-parecerem do mesmo ensaio.
+Do mesmo jeito que o mapa de fundos vem antes do conteúdo, **o mapa de imagem
+vem antes do layout**. Sem ele, o resultado é sempre o mesmo: um fundo
+texturizado e mais nada, e a página fica com cara de rascunho bem diagramado.
 
-→ `references/midia-ia.md`
+> **Fundo texturizado não é o plano de imagem. É a camada zero dele.**
 
-### 5. Prefira diagrama a metáfora onde a pessoa precisa entender
+Percorra as dobras do `COPY.md` e decida, uma por uma, **o que carrega
+visualmente aquela dobra**:
+
+| Dobra | O que ela costuma pedir |
+|---|---|
+| Título e abertura | **uma composição, não uma imagem.** Três camadas no mínimo: o motivo principal, algo atrás dele com profundidade, e a luz da marca por cima. Se há expert, é a foto na frente e a demonstração atrás do ombro |
+| Proposta de valor | um **diagrama por passo** do método, em vetor, e não um ícone genérico por card |
+| Benefícios comparativos | contraste visual entre as duas colunas, não só a tabela: marcador cheio contra vazio, peso diferente, a coluna perdedora dessaturada |
+| Prova social | o artefato da prova: print de conversa tratado, painel de números, foto real de quem fala |
+| Torre de oferta | um ícone por item, o mesmo conjunto e o mesmo peso, mais o cartão de fechamento com tratamento próprio |
+| Garantia | um selo, em vetor, com o prazo em número grande |
+| FAQ e fechamento | pode ser a única dobra sem peça. Se for, diga que foi escolha |
+
+**A regra de suficiência:** conte as dobras que pedem apoio visual e conte as
+peças do seu mapa. Se o segundo número for muito menor, o mapa não está pronto.
+Uma página de sete dobras costuma pedir de **cinco a nove peças**, entre
+composição, diagrama, selo, painel e conjunto de ícones.
+
+"Nada" é resposta legítima pra uma dobra, mas precisa ser **argumentada**, não
+ser o que sobrou por falta de plano.
+
+Escreva o mapa no `PROJETO.md` antes de abrir o HTML:
+
+```markdown
+## Mapa de imagem
+| Dobra | Peça | Origem | Estado |
+|---|---|---|---|
+| 1 hero | composição em 3 camadas: foto + painel de vidro + luz | foto do cliente + CSS | feito |
+| 2 método | 4 diagramas em vetor, um por passo | desenhado | feito |
+| 3 comparativo | marcadores duotone + coluna dessaturada | Phosphor | feito |
+| 5 torre | 7 ícones em chip | Phosphor | feito |
+| 6 garantia | selo vetorial com serrilha | desenhado | feito |
+```
+
+### 5. Componha a mídia com um DNA fixo
+
+Se for gerar imagem por IA, escreva **um parágrafo de direção que entra em todos
+os prompts**. É isso que faz peças criadas em momentos diferentes parecerem do
+mesmo ensaio. A mesma lógica vale sem IA: um vocabulário só de traços faz
+diagramas separados lerem como família.
+
+→ `references/midia-ia.md`, e `references/imagem-sem-pagar.md` pra compor sem
+gastar
+
+### 6. Prefira diagrama a metáfora onde a pessoa precisa entender
 
 Arte abstrata cria clima. Diagrama explica. Nas dobras onde a pessoa decide se
 entendeu, mostre o **artefato**, não a metáfora dele: um wireframe, uma
@@ -120,13 +164,13 @@ legibilidade é alinhamento exato e texto nítido.
 
 → `references/efeitos.md` (seção 7)
 
-### 6. Audite antes de declarar pronto
+### 7. Audite antes de declarar pronto
 
 Nunca entregue no "acho que está bom". Meça.
 
 → `references/auditoria-visual.md` e os scripts em `scripts/`
 
-### 7. Efeitos prontos, com o motivo do conserto junto
+### 8. Efeitos prontos, com o motivo do conserto junto
 
 Parallax de mouse por camadas, dissolver imagem sem recorte, cartões de vidro,
 fundo em quatro camadas, selo vetorial com serrilha calculada, sanfona que de
@@ -134,7 +178,7 @@ fato anima, infográfico em vetor. Cada um com a armadilha que ele esconde.
 
 → `references/efeitos.md`
 
-### 8. Hero com o expert: a foto entra no primeiro frame
+### 9. Hero com o expert: a foto entra no primeiro frame
 
 Se a pessoa que ensina é parte da oferta, a foto dela abre a página em qualquer
 largura. Demonstração, arte ou animação ficam **atrás do ombro**, apresentadas
@@ -144,7 +188,7 @@ dela.
 
 → `references/hero-expert.md`
 
-### 9. Ícones: um conjunto, um peso, duas camadas
+### 10. Ícones: um conjunto, um peso, duas camadas
 
 Phosphor Duotone inlinado como SVG, segunda camada na cor de acento a 55%,
 sempre dentro de um chip. É o padrão desta skill. Lucide
@@ -323,7 +367,10 @@ Não entregue sem passar por aqui:
 - [ ] Hierarquia vinda dos rótulos do arquivo, não do tamanho de fonte
 - [ ] Cor e tipografia vindas da marca registrada, não escolhidas por você
 - [ ] Nenhum `[confirmar:` sobrando no `COPY.md`, ou a pessoa avisada dos que sobraram
-- [ ] Plano de imagem decidido antes do layout, e a camada de mídia conferida
+- [ ] Mapa de imagem escrito dobra a dobra no `PROJETO.md`, antes do HTML
+- [ ] Número de peças compatível com o número de dobras que pedem apoio visual
+- [ ] O hero é uma composição em camadas, não uma imagem chapada
+- [ ] Toda dobra sem peça tem o motivo escrito
 - [ ] Se falta a chave de API, o caminho gratuito foi oferecido **antes** do pago
 - [ ] Nenhuma foto de banco de imagem
 - [ ] Uma família tipográfica, no máximo quatro pesos

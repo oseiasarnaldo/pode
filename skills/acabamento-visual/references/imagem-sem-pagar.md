@@ -44,7 +44,40 @@ O que substitui foto, e onde está documentado:
 segundo, não tem uma requisição externa, não tem licença pra conferir, e não
 tem como parecer com a de outra pessoa, porque nasce das cores da marca.
 
-O custo real é seu tempo escrevendo CSS, e é o que a skill já faz de graça.
+### E não é uma textura de fundo, é composição
+
+O erro que este nível induz, se lido com pressa, é entregar **um fundo
+texturizado e mais nada**. Isso não é o nível 1 feito, é o nível 1 começado.
+
+Sem nenhuma foto, uma dobra de abertura decente tem de **três a cinco camadas
+empilhadas**, e cada uma tem função:
+
+```
+5. grão por cima de tudo, 2 a 5%          ← tira o aspecto de plástico
+4. luz da marca, radial, mascarada        ← o acento, como luz e não tinta
+3. o motivo: painel de vidro, mini        ← é isto que dá o que olhar
+   interface, diagrama, selo, cartão
+2. grade em CSS, mascarada no centro      ← dá escala e profundidade
+1. fundo escuro da dobra                  ← a base
+```
+
+A camada 3 é a que quase sempre falta, e é a única que a pessoa realmente
+"vê". Sem ela sobra um degradê bonito com texto em cima.
+
+**Peças que se desenham sem imagem nenhuma, e rendem mais que foto:**
+
+| Peça | O que é | Onde está |
+|---|---|---|
+| Mini interface | um retângulo com barra de navegador, o domínio, e barras no lugar do texto | `efeitos.md` seção 9, `icones.md` seção 4 |
+| Painel de status | linhas com chip, nome e pílula de estado, uma delas destacada | `icones.md` seção 4 |
+| Diagrama de passo | wireframe, checklist, fluxo, tudo em vetor com um vocabulário só de traços | `efeitos.md` seção 7 |
+| Cartão de vidro flutuante | `backdrop-filter`, borda de luz, ciclos de flutuação diferentes por cartão | `efeitos.md` seção 3 |
+| Selo de garantia | serrilha calculada, número grande, giro lento e linear | `efeitos.md` seção 5 |
+| Barras de progresso animadas | uma cheia, uma parcial com brilho varrendo, uma vazia | `icones.md` seção 4 |
+| Marquee de logos | com máscara de fade nas duas bordas | `profundidade.md` seção 4 |
+
+Monte **uma peça por dobra que pede apoio visual**, não uma pra página inteira.
+O custo é seu tempo escrevendo CSS, e é exatamente o que a skill já faz.
 
 ---
 
@@ -145,6 +178,8 @@ Igual ao que vem de qualquer origem, e não é opcional:
 
 ## Checklist
 
+- [ ] Mapa de imagem feito dobra a dobra antes de qualquer coisa
+- [ ] Nenhuma dobra ficou só com fundo texturizado por falta de plano
 - [ ] Nível 1 tentado antes de procurar imagem em qualquer lugar
 - [ ] Foto própria pedida antes de recorrer a acervo
 - [ ] Nenhuma foto de estoque com pessoa
