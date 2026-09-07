@@ -46,7 +46,9 @@ O agente carrega sozinho. Se preferir chamar pelo nome, `/pode`.
 
 Ele começa perguntando três coisas (o nome do projeto, se é página nova ou
 melhoria de uma que existe, e se você quer acompanhar cada etapa ou receber
-pronto), cria a pasta em `~/projetos`, e conduz dali em diante.
+pronto), cria a pasta do projeto **ali onde você abriu o terminal**, e conduz
+dali em diante. Onde os seus projetos moram é escolha sua: ele trabalha onde
+você está, não numa pasta que ele inventou.
 
 **Ao voltar depois**, é só abrir a pasta do projeto e dizer "vamos continuar".
 Ele lê o `PROJETO.md`, vê onde parou e segue. Você não repete nada.

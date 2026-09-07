@@ -72,9 +72,8 @@ numa tela, e perguntar depois custa retrabalho.
 
 **1 · Que nome dá pro projeto?**
 
-É o que vira a pasta, dentro de `~/projetos` (a casa de todos os projetos,
-criada no setup). Sem isso, os arquivos caem soltos onde a pessoa abriu o
-terminal.
+É o que vira a pasta, criada **dentro do diretório em que a pessoa abriu o
+agente**. Onde os projetos dela moram é escolha dela, não sua.
 Converta pra minúsculas com hífen, mostre o resultado e siga: nome de pasta não
 é decisão de negócio.
 

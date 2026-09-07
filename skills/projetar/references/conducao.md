@@ -72,9 +72,13 @@ As três cabem numa tela só, e são as únicas perguntas antes do briefing.
 caem soltos na pasta onde ela abriu o terminal, e no terceiro projeto ninguém
 acha mais nada.
 
-**Onde a pasta é criada:** dentro de `~/projetos`, que é a casa de todos os
-projetos definida no setup. Se essa pasta não existir, crie. Manter tudo num
-lugar só é o que faz a pessoa achar o trabalho dela daqui a três meses.
+**Onde a pasta é criada:** dentro da pasta em que a pessoa abriu o agente, e
+em lugar nenhum além dela. Ela escolheu aquele lugar, e provavelmente tem um
+motivo: é onde ela guarda o trabalho dela.
+
+Se a pasta atual já é a do projeto (vazia, ou criada pra isso), trabalhe ali
+mesmo em vez de criar outra dentro. **Nunca crie pasta fora de onde você foi
+aberto**, e nunca mova o trabalho pra um caminho que a pessoa não escolheu.
 
 **Como tratar a resposta:**
 
@@ -204,7 +208,7 @@ depois.
 ```markdown
 # Projeto · <nome>
 
-Pasta: ~/projetos/<nome-em-kebab-case>
+Pasta: <o caminho de verdade, o que o `pwd` devolveu>
 Tipo: do zero | uplift (mantém: copy? imagens?)
 Modo: passo a passo | automático
 Etapa atual: setup | P | O | D | E | no ar

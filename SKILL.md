@@ -32,10 +32,15 @@ novo o que já foi respondido.
 
 Na primeira mensagem, nesta ordem:
 
+**Você trabalha na pasta onde a pessoa abriu o agente.** Ela escolheu aquele
+lugar, e não cabe a você mudar isso nem inventar uma pasta em outro canto do
+computador.
+
 ```bash
-ls ~/projetos 2>/dev/null                 # existem projetos?
-cat ./PROJETO.md 2>/dev/null              # já estou dentro de um?
-ls ~/projetos/*/PROJETO.md 2>/dev/null    # quais têm projeto começado?
+pwd                                # onde eu estou
+cat ./PROJETO.md 2>/dev/null       # já estou dentro de um projeto?
+ls ./*/PROJETO.md 2>/dev/null      # tem projeto começado numa subpasta?
+ls -a                              # o que mais tem aqui
 ```
 
 E decida:
@@ -43,8 +48,9 @@ E decida:
 | O que você encontrou | O que você faz |
 |---|---|
 | Um `PROJETO.md` na pasta atual | **Retomada.** Leia inteiro, diga em uma linha onde parou, e continue da etapa seguinte |
-| Projetos em `~/projetos`, e a pessoa não disse qual | Liste os nomes e pergunte qual, ou se é novo. Isso conta como **uma** das três perguntas |
-| `~/projetos` não existe | Projeto novo, e provavelmente primeira vez. Crie a pasta quando souber o nome |
+| `PROJETO.md` em subpastas, e a pessoa não disse qual | Liste os nomes e pergunte qual, ou se é novo. Isso conta como **uma** das três perguntas |
+| Pasta vazia, ou sem projeto nenhum | Projeto novo. A pasta dele nasce **aqui dentro**, quando você souber o nome |
+| Uma pasta que claramente já é de um projeto (tem `index.html`, `assets/`) | Pergunte antes de assumir: é essa página que ela quer trabalhar? |
 | A pessoa pediu algo pontual ("melhora essa headline") | Não force o funil. Vá direto na letra certa. Ver "Quando não é o método inteiro" |
 
 ---
@@ -53,9 +59,15 @@ E decida:
 
 Cabem numa tela. Faça as três juntas, e diga o que vem depois.
 
-**1 · Que nome dou pro projeto?** Vira a pasta em `~/projetos`. Converta pra
-minúscula com hífen, **mostre o resultado e siga**. Não peça confirmação de
-detalhe técnico. Se a pessoa não souber, sugira a partir do que ela já disse.
+**1 · Que nome dou pro projeto?** Vira uma pasta **aqui, onde você já está**.
+Converta pra minúscula com hífen, **mostre o resultado e siga**. Não peça
+confirmação de detalhe técnico. Se a pessoa não souber, sugira a partir do que
+ela já disse.
+
+Se a pasta atual já está vazia e é claramente do projeto (ela abriu o agente
+numa pasta que criou pra isso), **não crie subpasta**: trabalhe ali mesmo, e
+diga que é ali. Pasta dentro de pasta sem motivo é o tipo de coisa que faz a
+pessoa perder o próprio trabalho.
 
 **2 · É página nova, ou uma que já existe e você quer melhorar?** Se já existe,
 peça o link. No uplift vêm duas perguntas junto (mantém a copy? mantém as
@@ -67,8 +79,8 @@ Antes de criar a pasta, **cheque se ela já existe**. Se existir com
 `PROJETO.md` dentro, é retomada, não projeto novo: pergunte se continua ou se
 começa outro.
 
-Feito isso: crie `~/projetos/<nome>/`, crie o `PROJETO.md` (modelo no fim deste
-arquivo), e chame `projetar`.
+Feito isso: crie a pasta (ou fique na atual, conforme acima), crie o
+`PROJETO.md` (modelo no fim deste arquivo), e chame `projetar`.
 
 ---
 
@@ -208,7 +220,7 @@ Crie na pasta do projeto, no fim das perguntas de abertura, e vá preenchendo.
 ```markdown
 # Projeto · <nome>
 
-Pasta: ~/projetos/<nome-em-kebab-case>
+Pasta: <o caminho de verdade, o que o `pwd` devolveu>
 Tipo: do zero | uplift (mantém: copy? imagens?)
 Modo: passo a passo | automático
 Etapa atual: setup | P | O | D | E | no ar

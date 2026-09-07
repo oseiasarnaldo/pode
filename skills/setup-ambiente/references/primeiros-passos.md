@@ -116,23 +116,28 @@ método, está instalado.
 
 ---
 
-## 4 · A casa de todos os projetos
+## 4 · Onde o agente trabalha
 
-Uma pasta só, na sua pasta pessoal, onde tudo que você criar vai morar. Sem
-isso, no terceiro projeto você não acha mais nada.
+Essa é a única coisa que confunde no começo, e entender agora economiza muita
+dor: **o agente trabalha na pasta em que você o abriu.** Os arquivos nascem
+ali, e em lugar nenhum além dali.
+
+Ou seja, quem escolhe onde os seus projetos moram é você. Pode ser dentro de
+Documentos, na área de trabalho, num HD externo, tanto faz. O que não pode é
+abrir o agente em qualquer lugar e depois procurar o arquivo pelo computador
+inteiro.
+
+**Escolha o seu lugar e vá até ele.** No Mac, por exemplo:
 
 ```
-cd ~
-mkdir projetos
-cd projetos
+cd ~/Documents
 ```
 
-O `cd ~` volta pra sua pasta pessoal de onde quer que você esteja. É o comando
-que salva quando você se perde.
+Se você não faz ideia de onde está, `pwd` responde. E `cd ~` sempre volta pra
+sua pasta pessoal, de onde quer que você esteja: é o comando que salva quando
+você se perde.
 
----
-
-## 5 · A primeira página
+**Agora a pasta do primeiro projeto, dentro do lugar que você escolheu:**
 
 ```
 mkdir piloto
@@ -140,39 +145,18 @@ cd piloto
 claude
 ```
 
-**Sobre o nome `piloto`:** é de propósito. Esse primeiro projeto não precisa ser
-o da sua vida, ele existe pra você ver a coisa funcionando. Se você já sabe o
-que quer fazer, use o nome do seu negócio. Se não sabe, use `piloto` e siga:
-decidir o que vender não é pré-requisito pra aprender a ferramenta.
+**Sobre o nome `piloto`:** é de propósito. Esse primeiro não precisa ser o
+projeto da sua vida, ele existe pra você ver a coisa funcionando. Se você já
+sabe o que quer fazer, use o nome do seu negócio. Se ainda não sabe, use
+`piloto` e siga: decidir o que vender não é pré-requisito pra aprender a
+ferramenta.
 
-Da próxima vez, o caminho inteiro é uma linha só:
-
-```
-cd ~/projetos && mkdir nome-do-projeto && cd nome-do-projeto && claude
-```
-
-Dentro do agente, um pedido em português, digitado na conversa. Se você tem um
-negócio, use o seu. Se não tem, este serve:
+Da próxima vez, o caminho inteiro é uma linha só, trocando o começo pelo lugar
+que você escolheu:
 
 ```
-faz uma página simples de um curso de inglês para profissionais, com
-título, uma lista do que a pessoa aprende, e um botão de inscrição
+cd ~/Documents && mkdir nome-do-projeto && cd nome-do-projeto && claude
 ```
-
-Pra ver o resultado. No Mac:
-
-```
-open index.html
-```
-
-No Windows:
-
-```
-start index.html
-```
-
-A página abre no navegador. Esse é o ponto de chegada: **você termina com algo
-existindo, não com ferramenta instalada.**
 
 ---
 
@@ -214,6 +198,6 @@ uma ferramenta que você só usaria daqui a três semanas.
 - [ ] `claude --version` respondeu com um número
 - [ ] Login feito
 - [ ] Método instalado, e `/pode` respondendo
-- [ ] Pasta `~/projetos` criada como casa de tudo
+- [ ] Você escolheu onde seus projetos moram, e criou a pasta do primeiro lá
 - [ ] Uma página pedida ao agente e aberta no navegador
 - [ ] Nenhuma camada além da primeira instalada por enquanto
