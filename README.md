@@ -1,6 +1,7 @@
-# P.O.D.E.
+# Pitangus
 
-Um agente que faz página de vendas com você, do briefing até o endereço no ar.
+O agente do método P.O.D.E.: faz página de vendas com você, do briefing até o
+endereço no ar.
 
 Não é um curso pra assistir e reproduzir depois: você decide, ele executa, e as
 duas coisas acontecem na mesma tela.
@@ -12,7 +13,7 @@ duas coisas acontecem na mesma tela.
 Uma linha, e o agente passa a existir em qualquer pasta do seu computador:
 
 ```bash
-git clone https://github.com/oseiasarnaldo/pode.git ~/.claude/skills/pode
+git clone https://github.com/oseiasarnaldo/pode.git ~/.claude/skills/pitangus
 ```
 
 Feche e abra o Claude Code (ou rode `/reload-plugins`). Pronto.
@@ -20,17 +21,17 @@ Feche e abra o Claude Code (ou rode `/reload-plugins`). Pronto.
 **Pra atualizar**, quando sair versão nova:
 
 ```bash
-cd ~/.claude/skills/pode && git pull
+cd ~/.claude/skills/pitangus && git pull
 ```
 
 **Alternativa, por marketplace:**
 
 ```
 /plugin marketplace add oseiasarnaldo/pode
-/plugin install pode@pode
+/plugin install pitangus@pitangus
 ```
 
-**Conferir se instalou:** `claude plugin details pode` lista as cinco skills.
+**Conferir se instalou:** `claude plugin details pitangus` lista as cinco skills.
 
 ---
 
@@ -42,7 +43,7 @@ Abra o terminal na pasta onde você quer trabalhar e diga o que quer:
 quero fazer a página do meu curso
 ```
 
-O agente carrega sozinho. Se preferir chamar pelo nome, `/pode`.
+O agente carrega sozinho. Se preferir chamar pelo nome, `/pitangus`.
 
 Ele começa perguntando três coisas (o nome do projeto, se é página nova ou
 melhoria de uma que existe, e se você quer acompanhar cada etapa ou receber
