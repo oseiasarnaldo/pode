@@ -1,5 +1,9 @@
 # Ferramentas, por camada
 
+> **No Windows**, a tradução de cada comando deste arquivo está em
+> `windows.md`. Resumo: instale o **Git for Windows** e use o **Git Bash**, e
+> aí tudo aqui funciona sem tradução nenhuma.
+
 Cada camada tem: o que instalar, como testar, e o que fazer quando o teste
 falha. **Não avance sem o teste passar.**
 

@@ -1,5 +1,8 @@
 # Ferramentas
 
+> **No Windows**, veja `../../setup-ambiente/references/windows.md`: caminho do
+> Chrome, `winget`, e por que o Git Bash resolve quase tudo.
+
 Nada aqui é obrigatório. **Setenta por cento do resultado vem das regras**, que
 funcionam com o Claude e mais nada.
 

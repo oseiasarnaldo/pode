@@ -38,6 +38,9 @@ na 21, manda a senha em texto aberto pela rede.
 rsync -avz --delete ./ usuario@host:/caminho/public_html/oferta/
 ```
 
+No Windows o `rsync` só existe dentro do Git Bash. Fora dele, use um cliente
+de FTP ou o gerenciador de arquivos do painel, que estão logo acima.
+
 O `--delete` remove no servidor o que não existe mais no seu computador, o que
 mantém os dois lados iguais. Confira o caminho de destino **antes** de rodar com
 `--delete`: apontar pra pasta errada apaga a pasta errada.

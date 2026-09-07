@@ -15,13 +15,25 @@ Esta skill é o conjunto dessas decisões.
 
 ## Antes da primeira linha de HTML
 
-**Rode estes comandos na pasta do projeto. Levam um segundo e evitam o
-retrabalho mais caro do método.**
+**Abra o `COPY.md` e o `PROJETO.md` e responda três coisas.** Leva um segundo e
+evita o retrabalho mais caro do método.
+
+1. Qual é o `Status` no topo do `COPY.md`?
+2. **Sobrou algum `[confirmar:` no texto?**
+3. O `PROJETO.md` tem cor de marca, tipografia e a linha de fotos próprias?
+
+**Leia os arquivos.** Não confie em `grep`: no Windows, sem Git Bash, o comando
+não existe e a checagem falha em silêncio, que é o pior jeito de falhar. Se
+quiser o atalho, ele existe nos dois mundos:
 
 ```bash
-grep '^Status' COPY.md
+# macOS, Linux, ou Git Bash no Windows
 grep -n '\[confirmar:' COPY.md
-grep -n 'Fotos próprias\|Cores da marca\|Tipografia' PROJETO.md
+```
+
+```powershell
+# PowerShell no Windows
+Select-String -Path COPY.md -Pattern '\[confirmar:'
 ```
 
 Depois obedeça a tabela, **mesmo que a pessoa tenha acabado de dizer "pode
@@ -29,10 +41,10 @@ ir"**:
 
 | O que voltou | O que você faz |
 |---|---|
-| O segundo comando devolveu linhas, e o Status não é `liberado` | **PARE. Não escreva HTML nesta resposta.** Mostre a lista de pendências e pergunte: resolve agora, ou a página sobe com esses buracos à mostra? |
+| Sobrou `[confirmar:` e o Status não é `liberado` | **PARE. Não escreva HTML nesta resposta.** Mostre a lista de pendências e pergunte: resolve agora, ou a página sobe com esses buracos à mostra? |
 | Status não é `liberado`, mas nenhuma pendência sobrou | Siga. Escreva `Status: liberado` no arquivo e **diga que escreveu** |
 | Status é `liberado` | Siga |
-| O terceiro comando não devolveu cor de marca | Você não inventa cor de marca. Veja "De onde vem o texto, e de onde vem a marca" |
+| O `PROJETO.md` não tem cor de marca | Você não inventa cor de marca. Veja "De onde vem o texto, e de onde vem a marca" |
 
 **"Pode ir" autoriza o trabalho, não apaga uma pendência que a pessoa não viu.**
 Mostrar a lista custa uma mensagem. Publicar uma página com
@@ -259,7 +271,7 @@ Você não consegue rodar script nem gerar mídia. Ainda assim:
 
 Some ao nível 0:
 
-- Rode um servidor local: `python3 -m http.server 8000`
+- Rode um servidor local: `python3 -m http.server 8000` (no Windows, `py -m http.server 8000`)
 - Abra no navegador e **cole os scripts de `scripts/` no console** (F12). Eles
   são JavaScript puro, funcionam em qualquer navegador, sem instalar nada.
 - Isso já pega contraste, alvo de toque e overflow.
@@ -351,8 +363,15 @@ escrever HTML, porque isso muda o desenho da dobra, não só o preenchimento del
 Conferir se a camada de mídia existe leva um segundo:
 
 ```bash
-ls ~/.config/segredos/ 2>/dev/null    # a chave de API está guardada?
-command -v ffmpeg cwebp               # as ferramentas de imagem e vídeo existem?
+# macOS, Linux, ou Git Bash
+ls ~/.config/segredos/ 2>/dev/null
+command -v ffmpeg cwebp
+```
+
+```powershell
+# PowerShell no Windows
+Get-ChildItem "$HOME\.config\segredos" -ErrorAction SilentlyContinue
+Get-Command ffmpeg, cwebp -ErrorAction SilentlyContinue
 ```
 
 **Se não estiver pronta, apresente as duas saídas, nessa ordem, e sem empurrar

@@ -54,7 +54,8 @@ e você só passa pra próxima quando esbarrar no limite dela.
 Quem parar na camada 1 ainda faz página boa. As outras três ampliam, não
 substituem.
 
-→ `references/ferramentas.md`
+→ `references/ferramentas.md`, e `references/windows.md` se a máquina for
+Windows: o método roda igual lá, o que muda é o nome de alguns comandos
 
 ---
 

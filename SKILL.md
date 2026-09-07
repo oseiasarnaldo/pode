@@ -36,12 +36,14 @@ Na primeira mensagem, nesta ordem:
 lugar, e não cabe a você mudar isso nem inventar uma pasta em outro canto do
 computador.
 
-```bash
-pwd                                # onde eu estou
-cat ./PROJETO.md 2>/dev/null       # já estou dentro de um projeto?
-ls ./*/PROJETO.md 2>/dev/null      # tem projeto começado numa subpasta?
-ls -a                              # o que mais tem aqui
-```
+**Use as suas ferramentas de arquivo pra isso, não comando de terminal.** Ler
+e listar arquivo funciona igual no Mac, no Linux e no Windows; `ls` e `cat` não.
+O que você precisa descobrir:
+
+- em que pasta você está
+- se existe um `PROJETO.md` aqui
+- se existe um `PROJETO.md` numa subpasta
+- o que mais tem nessa pasta
 
 E decida:
 
@@ -92,7 +94,7 @@ Depois da abertura, quem manda é o campo `Etapa atual` do `PROJETO.md`:
 |---|---|---|
 | `setup` | `setup-ambiente` | a pessoa conseguir criar e abrir uma página de teste |
 | `P` | `projetar` | os itens de saída estiverem no `PROJETO.md`, **e o material base tiver sido pedido** |
-| `O` | `ofertar-copy` | o `COPY.md` existir e a pessoa tiver posto `Status: liberado`. Antes de passar pro D, rode `grep -n '\[confirmar:' COPY.md`: **se voltar linha, pare e mostre**, mesmo com "pode ir" na mesa |
+| `O` | `ofertar-copy` | o `COPY.md` existir e a pessoa tiver posto `Status: liberado`. Antes de passar pro D, **leia o `COPY.md` e procure `[confirmar:`**: se sobrou algum, pare e mostre, mesmo com "pode ir" na mesa |
 | `D` | `acabamento-visual` | a auditoria visual passar, medida e não estimada. **O mapa de imagem, dobra a dobra, se escreve antes do HTML.** Uma textura de fundo não é o mapa |
 | `E` | `entrar-no-ar` | a URL responder com a versão nova, confirmada por `curl` |
 | `no ar` | nada | a pessoa pedir a próxima coisa |

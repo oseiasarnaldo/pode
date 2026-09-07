@@ -24,6 +24,8 @@ Ela mora num cofre, fora da árvore do projeto:
 
 Um arquivo por serviço, com permissão fechada (só você lê):
 
+No Windows o caminho é o mesmo e o jeito de criar muda: veja `windows.md`.
+
 ```bash
 mkdir -p ~/.config/segredos
 chmod 700 ~/.config/segredos

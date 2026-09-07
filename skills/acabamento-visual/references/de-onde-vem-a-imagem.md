@@ -98,12 +98,21 @@ printf 'PIXABAY_API_KEY=coloque_a_chave_aqui\n' > ~/.config/segredos/pixabay.env
 chmod 600 ~/.config/segredos/pixabay.env
 ```
 
+No Windows, o equivalente está em `../../setup-ambiente/references/windows.md`.
+
 ### A busca
 
 ```bash
 source ~/.config/segredos/pixabay.env
 curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=dark+wood+texture&image_type=photo&orientation=horizontal&min_width=1600&safesearch=true&per_page=10" \
   | python3 -c "import json,sys; [print(h['id'],'|',h['imageWidth'],'x',h['imageHeight'],'|',h['largeImageURL']) for h in json.load(sys.stdin)['hits']]"
+```
+
+No PowerShell, a mesma busca com os nomes de lá (`curl.exe` com o `.exe` não é
+firula: sem ele o PowerShell chama outro comando):
+
+```powershell
+curl.exe -s "https://pixabay.com/api/?key=$env:PIXABAY_API_KEY&q=dark+wood+texture&image_type=photo&orientation=horizontal&min_width=1600&safesearch=true&per_page=10" | ConvertFrom-Json | ForEach-Object { $_.hits } | Select-Object id, imageWidth, imageHeight, largeImageURL
 ```
 
 Parâmetros que mais rendem: `image_type=photo`, `illustration` ou **`vector`**
