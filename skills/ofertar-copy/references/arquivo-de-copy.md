@@ -92,11 +92,31 @@ por tamanho de fonte.
 | `**Item N · Título**` e `**Item N · Corpo**` | cada card, cada linha de lista, cada bônus |
 | `**Botão**` | o texto do botão daquela dobra |
 | `**Apoio do botão**` | a linha que tira o último medo, logo abaixo |
-| `**Legenda**` | texto pequeno de apoio, selo, observação |
+| `**Legenda**` | o texto embaixo de uma imagem que explica algo, e também selo e observação |
+| `**Imagem**` | o que a peça visual daquela dobra precisa mostrar, em uma frase. Não é a arte, é a instrução pra quem desenha |
 | `**Pergunta**` e `**Resposta**` | cada par do FAQ |
 
 Se um texto não couber em nenhum rótulo, **provavelmente ele não deveria estar
 na página.** É um bom teste.
+
+### O rótulo `**Imagem**`, e por que ele é da copy e não do desenho
+
+Nas dobras que **explicam** alguma coisa (como funciona, o que você recebe, o
+que muda depois), escreva em uma frase o que a imagem precisa mostrar:
+
+```markdown
+**Imagem**
+A tela do resultado: uma página publicada, com o domínio na barra do navegador.
+
+**Legenda**
+Foi isso que saiu na primeira tarde.
+```
+
+Isso não é desenhar. É dizer **o que precisa ser entendido ali**, que é decisão
+de quem escreve o argumento. Quem desenha resolve como mostrar.
+
+Sem essa linha, a dobra vira texto sobre um fundo bonito, e a explicação fica
+só nas palavras.
 
 ---
 

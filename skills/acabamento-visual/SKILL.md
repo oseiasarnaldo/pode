@@ -111,18 +111,57 @@ texturizado e mais nada, e a página fica com cara de rascunho bem diagramado.
 
 > **Fundo texturizado não é o plano de imagem. É a camada zero dele.**
 
-Percorra as dobras do `COPY.md` e decida, uma por uma, **o que carrega
-visualmente aquela dobra**:
+### Os três papéis, e só um deles faz entender
 
-| Dobra | O que ela costuma pedir |
-|---|---|
-| Título e abertura | **uma composição, não uma imagem.** Três camadas no mínimo: o motivo principal, algo atrás dele com profundidade, e a luz da marca por cima. Se há expert, é a foto na frente e a demonstração atrás do ombro |
-| Proposta de valor | um **diagrama por passo** do método, em vetor, e não um ícone genérico por card |
-| Benefícios comparativos | contraste visual entre as duas colunas, não só a tabela: marcador cheio contra vazio, peso diferente, a coluna perdedora dessaturada |
-| Prova social | o artefato da prova: print de conversa tratado, painel de números, foto real de quem fala |
-| Torre de oferta | um ícone por item, o mesmo conjunto e o mesmo peso, mais o cartão de fechamento com tratamento próprio |
-| Garantia | um selo, em vetor, com o prazo em número grande |
-| FAQ e fechamento | pode ser a única dobra sem peça. Se for, diga que foi escolha |
+Antes de escolher a peça, escolha o **papel** dela. São três, e a confusão
+entre eles é o que produz página cheia de imagem que não ajuda ninguém:
+
+| Papel | O que faz | Onde vive |
+|---|---|---|
+| **Ambiente** | cria clima, dá profundidade, segura a atmosfera | **atrás** do texto: fundo, luz, textura, grão |
+| **Elucidação** | faz a pessoa **entender** o que está sendo dito | **dentro** da dobra, ao lado ou abaixo do texto, com tamanho pra ser lida |
+| **Prova** | mostra que aquilo existe e funcionou | dentro da dobra: foto real, print de tela, painel de números |
+
+A imagem de ambiente **nunca explica nada**, porque tem texto por cima dela.
+Quem explica é a de elucidação, e ela precisa de espaço próprio na grade da
+dobra.
+
+**Toda dobra que explica alguma coisa pede uma peça de elucidação.** Se o
+texto diz "como funciona", "o que você recebe", "o que muda depois", "por que
+é diferente", ali cabe uma peça que mostre, e não só um fundo bonito.
+
+O que elucida, em ordem de força:
+
+1. **O artefato real.** A tela do resultado, o material que a pessoa recebe, a
+   planilha preenchida, a página publicada com o domínio na barra.
+2. **Antes e depois**, lado a lado, com o mesmo enquadramento nos dois.
+3. **O passo a passo em quadros**, um por etapa, com o mesmo vocabulário de
+   traços.
+4. **A comparação**, o jeito antigo contra o novo, no mesmo desenho.
+5. **O diagrama do mecanismo**, quando o que se vende é um processo.
+
+**O teste que decide se a peça elucida:** tape o texto da dobra. A imagem
+sozinha ainda conta o que está acontecendo? Se não conta, ela é ambiente, e a
+dobra continua sem explicação visual.
+
+**Toda peça de elucidação leva legenda.** O `COPY.md` tem o rótulo
+`**Legenda**` justamente pra isso: se a copy escreveu uma, ela é obrigatória.
+Se não escreveu e a peça precisa, peça o texto em vez de inventar.
+
+### Agora, dobra a dobra
+
+Percorra as dobras do `COPY.md` e decida, uma por uma, **qual peça carrega
+aquela dobra e em que papel**:
+
+| Dobra | Papel | O que ela costuma pedir |
+|---|---|---|
+| Título e abertura | ambiente **mais** elucidação | **uma composição, não uma imagem.** Três camadas no mínimo: o motivo principal, algo atrás com profundidade, e a luz da marca. Se há expert, a foto na frente e a demonstração do resultado atrás do ombro |
+| Proposta de valor | **elucidação** | é a dobra que mais precisa: um quadro por passo do método, mostrando o artefato de cada etapa. Ícone genérico por card não elucida, só rotula |
+| Benefícios comparativos | **elucidação** | o jeito antigo contra o novo no mesmo desenho, ou as duas colunas com contraste visual de verdade: marcador cheio contra vazio, a coluna perdedora dessaturada |
+| Prova social | **prova** | o artefato: print de conversa tratado, painel de números, foto real de quem fala |
+| Torre de oferta | rótulo | um ícone por item, mesmo conjunto e mesmo peso, mais o cartão de fechamento com tratamento próprio |
+| Garantia | rótulo | um selo em vetor, com o prazo em número grande |
+| FAQ e fechamento | pode ser nenhum | é a dobra que mais aceita ficar sem peça. Se for, diga que foi escolha |
 
 **A regra de suficiência:** conte as dobras que pedem apoio visual e conte as
 peças do seu mapa. Se o segundo número for muito menor, o mapa não está pronto.
@@ -136,13 +175,15 @@ Escreva o mapa no `PROJETO.md` antes de abrir o HTML:
 
 ```markdown
 ## Mapa de imagem
-| Dobra | Peça | Origem | Estado |
-|---|---|---|---|
-| 1 hero | composição em 3 camadas: foto + painel de vidro + luz | foto do cliente + CSS | feito |
-| 2 método | 4 diagramas em vetor, um por passo | desenhado | feito |
-| 3 comparativo | marcadores duotone + coluna dessaturada | Phosphor | feito |
-| 5 torre | 7 ícones em chip | Phosphor | feito |
-| 6 garantia | selo vetorial com serrilha | desenhado | feito |
+| Dobra | Papel | Peça | Origem | Estado |
+|---|---|---|---|---|
+| 1 hero | ambiente + elucidação | foto do expert na frente, tela do resultado atrás do ombro, luz da marca | foto do cliente + CSS | feito |
+| 2 método | elucidação | 4 quadros em vetor, um por passo, mostrando o artefato de cada um | desenhado | feito |
+| 3 comparativo | elucidação | o jeito antigo contra o novo, mesmo desenho, coluna perdedora dessaturada | desenhado | feito |
+| 4 prova | prova | print de conversa tratado + painel de números | do cliente | pendente |
+| 5 torre | rótulo | 7 ícones em chip | Phosphor | feito |
+| 6 garantia | rótulo | selo vetorial com serrilha | desenhado | feito |
+| 7 FAQ | nenhum | só tipografia, de propósito: a dobra é de leitura | | feito |
 ```
 
 ### 5. Componha a mídia com um DNA fixo
@@ -370,6 +411,9 @@ Não entregue sem passar por aqui:
 - [ ] Mapa de imagem escrito dobra a dobra no `PROJETO.md`, antes do HTML
 - [ ] Número de peças compatível com o número de dobras que pedem apoio visual
 - [ ] O hero é uma composição em camadas, não uma imagem chapada
+- [ ] Toda dobra que explica algo tem peça de **elucidação**, não só ambiente
+- [ ] Cada peça de elucidação passa no teste de tapar o texto
+- [ ] Peça de elucidação com legenda, vinda do `COPY.md`
 - [ ] Toda dobra sem peça tem o motivo escrito
 - [ ] Se falta a chave de API, o caminho gratuito foi oferecido **antes** do pago
 - [ ] Nenhuma foto de banco de imagem

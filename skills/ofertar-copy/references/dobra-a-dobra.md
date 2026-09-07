@@ -47,6 +47,11 @@ mostrou.
 **O texto não pode:** virar lista de funcionalidade. Cada etapa do método
 precisa dizer o que a pessoa **sai com**, não o que ela vai assistir.
 
+**A imagem daqui explica, não decora.** É a dobra onde a pessoa decide se
+entendeu, então marque no `COPY.md`, com o rótulo `**Imagem**`, o que precisa
+ser mostrado: o artefato de cada passo, o antes e depois, a tela do resultado.
+Fundo bonito não faz ninguém entender nada.
+
 **Em educação:** aqui a tentação é listar grade curricular. Grade é o produto,
 não o resultado. Um colégio que descreve "carga horária estendida e metodologia
 ativa" está falando de si; o mesmo colégio dizendo "seu filho sai do 9º ano
