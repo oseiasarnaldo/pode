@@ -442,7 +442,7 @@ apenas). O que falta ali é a implementação de produção: um único
     opacity: 0; transform: translateY(24px);
     transition: transform var(--dur-enter) var(--ease-out-expo),
                 opacity var(--dur-enter) ease;
-    transition-delay: calc(var(--reveal-i, 0) * 70ms);
+    transition-delay: calc(var(--reveal-i, 0) * 110ms);
   }
   .js [data-reveal].visivel { opacity: 1; transform: none; }
 }
@@ -467,6 +467,10 @@ const io = new IntersectionObserver((entradas) => {
 
 alvos.forEach(el => io.observe(el));
 ```
+
+**110ms, e não 70ms.** Com 70ms, num grupo de quatro, o último elemento
+terminava antes do primeiro sair do lugar: a cascata inteira acontecia dentro
+do mesmo piscar de olho e lia como um bloco só aparecendo, não como sequência.
 
 **O atraso em cascata vem da posição entre os IRMÃOS marcados, não de um
 índice fixo por seção.** Um grid de 2 cards escalona em 2 passos, um de 6

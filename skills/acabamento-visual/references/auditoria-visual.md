@@ -31,7 +31,12 @@ Revisão de código teria aprovado os seis.
 
 ## Como rodar os scripts
 
-Os dois scripts em `scripts/` são JavaScript puro. Não precisam de instalação.
+Os três scripts em `scripts/` são JavaScript puro. Não precisam de instalação.
+
+`audita-acabamento.js` é o mais rápido de rodar e o que mais pega página
+chapada: ele conta luz, entrada, máscara, grão e desfoque no CSS aplicado, e
+diz o que está abaixo do piso. Roda **por http**, não por `file://`, senão o
+navegador bloqueia a leitura das folhas de estilo.
 
 **Sem terminal:** abra a página, aperte F12, vá em Console, cole o script inteiro
 e dê Enter.

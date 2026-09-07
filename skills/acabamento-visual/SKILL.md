@@ -57,6 +57,36 @@ texto.
 
 ---
 
+## O piso de acabamento
+
+Esta skill descreve dezenas de técnicas, e dá pra ler tudo e entregar uma
+página **chapada**: imagem colada em fundo liso, sem entrada, sem máscara, sem
+luz. Catálogo não obriga nada, então existe um piso.
+
+**Sete itens, e nenhuma página é entregue abaixo deles:**
+
+1. Dobra de abertura com **quatro camadas nomeadas** (textura, grade e scrim,
+   luz de marca, grão), cada uma com z-index próprio
+2. **Três radiais** de luz na abertura, não uma. Uma só lê como degradê de
+   banco de imagem
+3. **Entrada no scroll** (`data-reveal`) nos blocos de conteúdo, cascata de
+   110ms
+4. **Máscara** em toda imagem que encosta no fundo
+5. **Grão** na página inteira, entre 2 e 8%
+6. **Sombra em duas camadas**, e borda de luz no escuro
+7. **`prefers-reduced-motion`** em tudo que se move
+
+Tem um medidor no fim do arquivo de referência: ele conta o que existe no CSS
+aplicado e diz o que está abaixo do piso. **Rode antes de entregar**, do mesmo
+jeito que se roda o auditor de contraste.
+
+Página deliberadamente seca pode ficar abaixo. O que não pode é ficar abaixo
+por não ter pensado nisso.
+
+→ `references/piso-de-acabamento.md`
+
+---
+
 ## Regra zero: as três constantes
 
 Trave isto antes de escrever a primeira linha. Não é preferência estética, é o
@@ -471,3 +501,4 @@ Não entregue sem passar por aqui:
 - [ ] `prefers-reduced-motion` respeitado
 - [ ] Expert no primeiro frame em 390, 768 e 1440, quando ele é parte da oferta
 - [ ] Os 12 erros acima, todos verificados
+- [ ] Medidor do piso de acabamento rodado, sem item `ABAIXO` por esquecimento
