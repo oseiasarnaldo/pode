@@ -1,0 +1,27 @@
+# Nome do produto ou da instituição
+
+> Uma frase dizendo o que é, pra quem, e o que a pessoa consegue depois.
+> É o resumo que o agente lê primeiro, então diga o essencial aqui.
+
+Um parágrafo curto de contexto, opcional. Serve pra situar quem não conhece:
+o que a instituição faz, há quanto tempo, pra que público. Sem adjetivo de
+propaganda, porque agente não se impressiona e o leitor humano desconfia.
+
+## A oferta
+
+- [O que está sendo vendido](https://seudominio.com.br/): formato, duração e o que a pessoa recebe
+- [Preço e condições](https://seudominio.com.br/#oferta): valor, formas de pagamento, o que está incluso
+- [Garantia](https://seudominio.com.br/#garantia): prazo e condição pra pedir reembolso
+
+## Perguntas frequentes
+
+- [Dúvidas comuns](https://seudominio.com.br/#faq): pré-requisito, formato, acesso, suporte
+
+## Contato
+
+- [Falar com uma pessoa](https://wa.me/55XXXXXXXXXXX): canal direto, com horário de atendimento
+
+## Optional
+
+- [Sobre quem ensina](https://seudominio.com.br/#autoridade): trajetória e credencial
+- [Política de privacidade](https://seudominio.com.br/privacidade)

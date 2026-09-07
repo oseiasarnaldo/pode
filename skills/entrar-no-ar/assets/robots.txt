@@ -1,0 +1,7 @@
+# Enquanto a pagina e rascunho, troque Allow por Disallow: /
+# e lembre que o bloqueio tambem costuma existir na config do servidor.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://seudominio.com.br/sitemap.xml

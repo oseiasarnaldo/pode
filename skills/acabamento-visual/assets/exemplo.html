@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acabamento visual · exemplo mínimo</title>
+<link rel="stylesheet" href="tokens.css">
+</head>
+<body>
+
+<!-- Página mínima usando SÓ as primitivas de tokens.css.
+     Nenhum CSS extra. Serve para: (1) provar que o sistema funciona,
+     (2) você trocar as duas cores da marca e ver tudo mudar junto. -->
+
+<section class="section section--loose section--dark">
+  <div class="container">
+    <p class="eyebrow">Rótulo da dobra</p>
+    <h1 class="display">Um título de dobra sem caixa alta, com leading apertado</h1>
+    <p class="lead">A linha de apoio explica em uma frase o que a dobra entrega. Até 58 caracteres por linha, para o olho não se perder no retorno.</p>
+    <p style="margin-top:1.75rem">
+      <a class="btn btn--primary" href="#">Ação principal</a>
+      <a class="btn btn--ghost" href="#">Ação secundária</a>
+    </p>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<section class="section section--dark">
+  <div class="container">
+    <p class="eyebrow">Cartões de vidro</p>
+    <h2 class="display">A cor entra como luz, não como área pintada</h2>
+    <div style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:2rem">
+      <div class="glass">
+        <h3 style="font-size:.8125rem;font-weight:700;margin:0 0 .3125rem;color:#fff;display:flex;align-items:center;gap:.5rem"><span style="width:7px;height:7px;border-radius:999px;background:var(--grad-marca);flex:none"></span>Primeiro ponto</h3>
+        <p style="font-size:.75rem;line-height:1.5;color:var(--on-dark-muted);margin:0">Uma linha de apoio, no máximo duas.</p>
+      </div>
+      <div class="glass">
+        <h3 style="font-size:.8125rem;font-weight:700;margin:0 0 .3125rem;color:#fff;display:flex;align-items:center;gap:.5rem"><span style="width:7px;height:7px;border-radius:999px;background:var(--grad-marca);flex:none"></span>Segundo ponto</h3>
+        <p style="font-size:.75rem;line-height:1.5;color:var(--on-dark-muted);margin:0">Mantenha todos com a mesma altura.</p>
+      </div>
+      <div class="glass">
+        <h3 style="font-size:.8125rem;font-weight:700;margin:0 0 .3125rem;color:#fff;display:flex;align-items:center;gap:.5rem"><span style="width:7px;height:7px;border-radius:999px;background:var(--grad-marca);flex:none"></span>Terceiro ponto</h3>
+        <p style="font-size:.75rem;line-height:1.5;color:var(--on-dark-muted);margin:0">Cor de marca só no rótulo, nunca no corpo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divisor"></div>
+
+<section class="section section--loose section--deep">
+  <div class="container">
+    <h2 class="display display--center grad">O manifesto usa o gradiente, uma vez por página</h2>
+  </div>
+</section>
+
+<div class="divisor divisor--sobe"></div>
+
+<section class="section section--light">
+  <div class="container">
+    <p class="eyebrow">A quebra clara</p>
+    <h2 class="display">O branco é sinalização de assunto, não respiro decorativo</h2>
+    <p class="lead">Por isso ele aparece uma vez, e não a cada dobra. Se acontece sempre, para de significar alguma coisa.</p>
+  </div>
+</section>
+
+<div class="divisor divisor--sutil"></div>
+
+<footer class="section section--tight section--deep">
+  <div class="container">
+    <p style="font-size:.75rem;color:var(--on-dark-faint);margin:0">
+      Página mínima do kit. Troque <code>--marca-a</code> e <code>--marca-b</code> em
+      <code>tokens.css</code> e tudo acima muda junto.
+    </p>
+  </div>
+</footer>
+
+<script>document.documentElement.classList.add('js');</script>
+</body>
+</html>

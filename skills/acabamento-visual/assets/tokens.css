@@ -1,0 +1,263 @@
+/* ============================================================
+   TOKENS · base neutra do acabamento visual
+
+   COMO USAR: troque só o bloco "MARCA" abaixo. Nada mais.
+   Se você precisou escrever um valor de cor fora do :root,
+   ou o sistema está incompleto, ou a decisão está errada.
+   ============================================================ */
+
+:root {
+
+  /* ============ MARCA · a ÚNICA parte que você troca ============ */
+
+  /* Duas cores, não mais. Se acha que precisa de três, o que
+     falta é diferença de tamanho ou de peso, não outra cor.
+     Os valores abaixo são PLACEHOLDER: não são identidade de
+     ninguém, existem só pra o kit abrir funcionando. Troque. */
+  --marca-a:    #0E7C7B;   /* primeira cor (aqui, um verde-azulado) */
+  --marca-b:    #C2410C;   /* segunda cor (aqui, uma ferrugem) */
+  --marca-a-hi: #12A3A1;   /* versão luminosa, só para brilho sobre escuro */
+  --marca-b-hi: #E8590C;
+  --marca-a-dk: #0B5F5E;   /* versão fechada, só para superfície com texto branco */
+  --marca-b-dk: #9A340A;
+
+  /* Neutro. Quatro degraus no escuro, dois no claro. */
+  --ink-900: #14181E;   /* o mais escuro. Base do mix-blend-mode: screen */
+  --ink-800: #1E232B;   /* fundo padrão da maioria das dobras */
+  --ink-700: #272D36;   /* card e superfície elevada */
+  --ink-600: #3A414D;   /* borda e divisor */
+  --surface:   #FFFFFF; /* a dobra de quebra */
+  --surface-2: #F5F6F8; /* variação clara */
+
+  /* Uma família. Quatro pesos. Troque pela família da sua marca. */
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* ============ FIM DA PARTE QUE VOCÊ TROCA ============ */
+
+
+  /* --- Gradientes --- */
+  --grad-marca: linear-gradient(45deg, var(--marca-a) 0%, var(--marca-b) 100%);
+  --grad-marca-hi: linear-gradient(45deg, var(--marca-a-hi) 0%, var(--marca-b-hi) 100%);
+  /* Um passo mais fechado, SÓ para superfície com texto branco em cima.
+     Muitas cores de marca reprovam em AA contra branco. Meça as DUAS
+     pontas do gradiente com as SUAS cores e feche o quanto for preciso.
+     Os valores aqui são o mesmo placeholder, um passo mais escuro.
+     (O par placeholder já passa em AA sobre branco, 5,01:1 e 5,18:1. Muita
+     cor de marca real não passa: por isso a variante fechada existe.) */
+  --grad-btn: linear-gradient(45deg, var(--marca-a-dk) 0%, var(--marca-b-dk) 100%);
+
+  /* --- Texto: quatro níveis, não dois --- */
+  --on-dark:        #FFFFFF;
+  --on-dark-muted:  rgba(255,255,255,.74);
+  --on-dark-faint:  rgba(255,255,255,.60);  /* .42 fica bonito e REPROVA em AA */
+  --on-light:       #272D36;
+  --on-light-muted: #5B6270;
+
+  /* --- Vidro --- */
+  --glass-bg:     rgba(255,255,255,.055);
+  --glass-border: rgba(255,255,255,.10);
+  --glass-blur:   12px;
+
+  /* --- Tipografia: escala fluida, sem degrau congelado --- */
+  --fs-display:    clamp(1.625rem, 1.05rem + 2.5vw, 3rem);
+  --fs-display-lg: clamp(2rem, 1.1rem + 3.9vw, 3.75rem);
+  --fs-lead:       clamp(.9375rem, .88rem + .3vw, 1.125rem);
+  --fs-body:       .9375rem;
+  --fs-sm:         .8125rem;
+  --fs-btn:        .8125rem;
+
+  --lh-display: 1.06;   /* apertado: é o que dá cara editorial */
+  --lh-body:    1.55;
+
+  /* --- Ritmo --- */
+  --container:       1320px;
+  --pad-x:           1.5rem;
+  --pad-x-md:        3.5rem;
+  --section-y-tight: 3.5rem;
+  --section-y:       5.5rem;
+  --section-y-loose: 7rem;
+
+  /* --- Raio: quatro degraus, cada um com um papel --- */
+  --r-btn:   4px;
+  --r-card:  6px;
+  --r-glass: 12px;
+  --r-panel: 18px;
+
+  /* --- Movimento: TRÊS curvas, nunca uma quarta --- */
+  --ease-out-expo: cubic-bezier(.22, 1, .36, 1);  /* entrada de destaque */
+  --ease-soft:     cubic-bezier(.25, .1, .25, 1); /* hover, troca de estado */
+  /* loop infinito: sempre linear, sem token */
+
+  --dur-micro: .3s;
+  --dur-face:  .5s;
+  --dur-enter: .6s;
+  --dur-hero:  .85s;
+
+  /* --- Sombra: duas camadas, cor herdando o viés do fundo --- */
+  --shadow-baixa: 0 1px 2px rgba(10,12,15,.12), 0 2px 8px rgba(10,12,15,.08);
+  --shadow-alta:  0 2px 4px rgba(10,12,15,.16), 0 18px 40px rgba(10,12,15,.32);
+  --shadow-btn:   0 1px 2px rgba(10,13,18,.08);
+  --shadow-marca: 0 10px 30px color-mix(in srgb, var(--marca-b) 28%, transparent);  /* só no CTA, só no hover */
+}
+
+/* ================= BASE ================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  background: var(--ink-800);
+  color: var(--on-dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img, svg, video { max-width: 100%; display: block; }
+button { font: inherit; }
+
+/* ================= PRIMITIVAS =================
+   Nenhuma delas tem valor de cor literal. Todas leem do :root. */
+
+.container { max-width: var(--container); width: 100%; margin-inline: auto; padding-inline: var(--pad-x); }
+@media (min-width: 768px) { .container { padding-inline: var(--pad-x-md); } }
+
+.section        { padding-block: var(--section-y); position: relative; }
+.section--tight { padding-block: var(--section-y-tight); }
+.section--loose { padding-block: var(--section-y-loose); }
+.section--dark  { background: var(--ink-800); color: var(--on-dark); }
+.section--deep  { background: var(--ink-900); color: var(--on-dark); }
+.section--light { background: var(--surface); color: var(--on-light); }
+
+/* Rótulo acima do título. Caixa alta VALE aqui. */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .625rem;
+  font-size: .75rem; font-weight: 700; letter-spacing: 1.6px;
+  text-transform: uppercase; color: var(--on-dark-faint); margin: 0 0 1rem;
+}
+.eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--grad-marca); border-radius: 2px; }
+.section--light .eyebrow { color: var(--on-light-muted); }
+
+/* Título de dobra. SEM caixa alta. O contraste vem de
+   tamanho + peso 700 + leading apertado. */
+.display {
+  font-size: var(--fs-display);
+  font-weight: 700; line-height: 1.14;
+  letter-spacing: -.018em; margin: 0;
+  text-wrap: balance;
+}
+@media (min-width: 768px) { .display { line-height: var(--lh-display); letter-spacing: -.02em; } }
+.display--center { text-align: left; }
+@media (min-width: 768px) { .display--center { text-align: center; max-width: 26ch; margin-inline: auto; } }
+
+/* Gradiente no texto, COM rede de segurança:
+   a cor sólida é declarada antes, e só vira transparente se o
+   navegador suportar. Senão, texto invisível. */
+.grad {
+  color: var(--marca-b);
+  background-image: var(--grad-marca-hi);
+  -webkit-background-clip: text; background-clip: text;
+}
+@supports (-webkit-background-clip: text) { .grad { color: transparent; } }
+
+.lead { font-size: var(--fs-lead); color: var(--on-dark-muted); margin: 1rem 0 0; max-width: 58ch; }
+.section--light .lead { color: var(--on-light-muted); }
+
+/* Botão. Usa --grad-btn, não --grad-marca: tem texto branco em cima. */
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .9375rem 1.75rem;
+  border: 0; border-radius: var(--r-btn);
+  font-size: var(--fs-btn); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .6px;
+  cursor: pointer; white-space: nowrap;
+  transition: transform var(--dur-micro) var(--ease-soft),
+              box-shadow var(--dur-micro) var(--ease-soft),
+              filter var(--dur-micro) var(--ease-soft);
+}
+.btn--primary { background: var(--grad-btn); color: #fff; box-shadow: var(--shadow-btn); }
+.btn--primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-marca); filter: brightness(1.06); }
+.btn--ghost { background: transparent; color: var(--on-dark); box-shadow: inset 0 0 0 1px rgba(255,255,255,.22); }
+.btn--ghost:hover { box-shadow: inset 0 0 0 1px var(--marca-b); transform: translateY(-2px); }
+.section--light .btn--ghost { color: var(--on-light); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--on-light) 20%, transparent); }
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-glass);
+  padding: 1.375rem;
+}
+
+/* Divisor de dobra. z-index OBRIGATÓRIO: sem ele o derrame fica
+   atrás do fundo opaco da seção seguinte. */
+.divisor {
+  position: relative; z-index: 5;
+  height: 1px; border: 0; margin: 0;
+  background: linear-gradient(90deg,
+              transparent 0%,
+              color-mix(in srgb, var(--marca-a) 20%, transparent) 10%,
+              color-mix(in srgb, var(--marca-b) 75%, transparent) 34%,
+              #fff 50%,                      /* o branco é o que ACENDE */
+              color-mix(in srgb, var(--marca-b) 75%, transparent) 66%,
+              color-mix(in srgb, var(--marca-a) 20%, transparent) 90%,
+              transparent 100%);
+}
+.divisor::before {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: min(52%, 620px); height: 5px; transform: translate(-50%,-50%);
+  background: linear-gradient(90deg, transparent,
+              color-mix(in srgb, var(--marca-b-hi) 70%, #fff) 50%, transparent);
+  filter: blur(5px); opacity: .9; pointer-events: none;
+}
+/* a elipse é MAIS ESTREITA que o box: encostando na borda,
+   aparece um corte reto nas laterais */
+.divisor::after {
+  content: ""; position: absolute; left: 50%; top: 0;
+  width: min(94%, 1200px); height: 190px; transform: translateX(-50%);
+  background: radial-gradient(ellipse 68% 100% at 50% 0%,
+              color-mix(in srgb, var(--marca-b) 22%, transparent) 0%,
+              transparent 78%);
+  pointer-events: none;
+}
+/* virada escuro -> claro: o derrame vai para CIMA.
+   luz sobre branco vira sujeira; sobre o escuro de cima, vira brilho */
+.divisor--sobe::after {
+  top: auto; bottom: 0;
+  background: radial-gradient(ellipse 68% 100% at 50% 100%,
+              color-mix(in srgb, var(--marca-b) 26%, transparent) 0%, transparent 78%);
+}
+.divisor--sutil::before { width: min(32%, 380px); opacity: .55; }
+.divisor--sutil::after  { opacity: .5; height: 140px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+:focus-visible { outline: 2px solid var(--marca-b-hi); outline-offset: 3px; border-radius: 2px; }
+
+/* Alvo de toque de 44px sem estragar o desenho:
+   o visual continua pequeno, a área clicável cresce por fora. */
+.alvo-44 { position: relative; }
+.alvo-44::before {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: 44px; height: 44px; transform: translate(-50%,-50%);
+}
+
+/* Nada some se o JavaScript falhar: a regra de ocultar só vale
+   sob .js, classe que o próprio script adiciona. */
+.js [data-reveal] { opacity: 0; transform: translateY(24px); }
+.js [data-reveal].visivel {
+  opacity: 1; transform: none;
+  transition: opacity var(--dur-enter) var(--ease-soft), transform var(--dur-enter) var(--ease-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important; scroll-behavior: auto !important;
+  }
+}

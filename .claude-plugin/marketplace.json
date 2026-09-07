@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "pode",
+  "owner": {
+    "name": "React"
+  },
+  "metadata": {
+    "description": "O método P.O.D.E., empacotado como agente",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "pode",
+      "description": "Conduz uma página de vendas do briefing ao ar: oferta, copy, acabamento visual e publicação com auditoria.",
+      "version": "1.0.0",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
