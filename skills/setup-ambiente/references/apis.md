@@ -2,9 +2,10 @@
 
 **Isto é opcional.** Você só precisa de chave se quiser **gerar imagem ou vídeo
 sob medida**. Página com arte própria tem uma cara que banco de imagem não dá,
-mas ela não é pré-requisito de página boa: o caminho gratuito está em
-`../acabamento-visual/references/imagem-sem-pagar.md`, e resolve a maioria dos
-casos sem nenhuma conta.
+mas ela não é pré-requisito de página boa. As quatro origens de imagem, e
+quando cada uma vale, estão em
+`../acabamento-visual/references/de-onde-vem-a-imagem.md`: desenhar cobre a
+maioria, e o Pixabay cobre quase todo o resto, de graça.
 
 Leia este arquivo quando decidir que quer arte gerada, não antes.
 
@@ -74,6 +75,8 @@ O mesmo padrão vale pra qualquer serviço: um arquivo por serviço no cofre, mo
 
 | Serviço | Quando você vai precisar |
 |---|---|
+| Pixabay | quando quiser textura ou objeto de acervo. **Grátis**, chave na hora |
+| Gemini | quando quiser arte gerada sob medida. Paga por peça |
 | Hospedagem (SFTP ou painel) | na letra E, pra publicar |
 | Plataforma de pagamento | pra pegar o link de checkout, que não é chave |
 | Pixel e rastreamento | é identificador público, pode ficar no HTML |

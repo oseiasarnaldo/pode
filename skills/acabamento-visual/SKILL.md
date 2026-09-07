@@ -193,8 +193,8 @@ os prompts**. É isso que faz peças criadas em momentos diferentes parecerem do
 mesmo ensaio. A mesma lógica vale sem IA: um vocabulário só de traços faz
 diagramas separados lerem como família.
 
-→ `references/midia-ia.md`, e `references/imagem-sem-pagar.md` pra compor sem
-gastar
+→ `references/midia-ia.md` pro DNA de prompt, e
+`references/de-onde-vem-a-imagem.md` pras quatro origens
 
 ### 6. Prefira diagrama a metáfora onde a pessoa precisa entender
 
@@ -346,7 +346,7 @@ escrever HTML, porque isso muda o desenho da dobra, não só o preenchimento del
 | Fotos próprias recebidas | use as fotos. Recorte na proporção em que aparecem, converta pra WebP, e **abra cada uma antes** pra ver se não tem texto queimado |
 | Não tem fotos, mas dá pra tirar hoje | **peça a foto do celular**. Numa escola ou num curso ela vale mais que qualquer acervo, porque é prova |
 | Não tem fotos, e a camada de mídia está pronta | **gere a arte**, com o DNA de marca em todo prompt |
-| Não tem fotos, e a camada de mídia não está pronta | **não pare, e não empurre a conta.** O caminho gratuito resolve a maioria dos casos: `references/imagem-sem-pagar.md` |
+| Não tem fotos, e a camada de mídia não está pronta | **não pare, e não empurre a conta.** Desenhar e o Pixabay resolvem a maioria dos casos: `references/de-onde-vem-a-imagem.md` |
 
 Conferir se a camada de mídia existe leva um segundo:
 
@@ -358,14 +358,13 @@ command -v ffmpeg cwebp               # as ferramentas de imagem e vídeo existe
 **Se não estiver pronta, apresente as duas saídas, nessa ordem, e sem empurrar
 a paga:**
 
-1. **De graça.** Fundo em quatro camadas, diagrama em vetor, cartão de vidro e
-   textura de ruído resolvem a maioria das páginas sem uma única imagem, e
-   deixam o carregamento mais rápido. Se faltar textura específica, o Openverse
-   devolve acervo CC0 **sem pedir chave nenhuma**. Tudo em
-   `references/imagem-sem-pagar.md`.
-2. **Pagando por peça.** Arte sob medida, coerente em série, feita com o DNA da
-   marca. Custa por imagem gerada, não assinatura, e o passo a passo está em
-   `../setup-ambiente/references/apis.md`.
+1. **De graça.** Quase tudo se desenha: fundo em camadas, quadro de passo em
+   vetor, cartão de vidro, mini interface, selo. E quando faltar uma textura ou
+   um objeto de verdade, o **Pixabay** resolve, com chave gratuita. Tudo em
+   `references/de-onde-vem-a-imagem.md`.
+2. **Pagando por peça.** O **Gemini**, pra arte sob medida e coerente em série,
+   feita com o DNA da marca. Custa por imagem gerada, não assinatura, e o passo
+   a passo está em `../setup-ambiente/references/apis.md`.
 
 Diga que a primeira existe **antes** de falar da segunda. Muita gente não vai
 querer ligar faturamento pra fazer uma página, e não precisa: a diferença entre
