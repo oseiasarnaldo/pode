@@ -135,16 +135,49 @@ D ficar claro que falta prova, volte pro O e diga por quê.
 
 ## Como fechar uma etapa
 
-**No modo passo a passo**, toda etapa termina igual, em quatro partes curtas:
+**Toda vez que você for pedir permissão pra seguir, mostre antes o que fez.**
+A pessoa não tem como saber se o trabalho aconteceu ou se você só disse que
+aconteceu. A checklist é a prova, e é ela que faz o aval dela valer alguma
+coisa.
 
-1. **O que eu entendi**, em três a cinco linhas. Nunca o arquivo inteiro.
-2. **A decisão que isso trava**, uma só, a mais importante, com o porquê.
-3. **O que vem agora**, nomeado em linguagem de gente.
-4. **Posso seguir?**
+O formato tem quatro partes, nesta ordem:
+
+**1 · Feito**, como checklist marcada. De cinco a oito linhas, não mais.
+
+```
+✓ Briefing fechado: o depois, quem decide, o que já falhou, o que não pode dizer
+✓ 4 concorrentes abertos e olhados, com a tabela de convenção contra diferenciação
+✓ Oferta fechada: 6 semanas, R$ 780 em 3x, garantia de 7 dias
+✓ Material base salvo em base/, cores tiradas do logo
+✓ PROJETO.md atualizado
+○ Depoimentos: não existem ainda, a prova vai vir de processo e número
+○ Data de início: você ainda não me passou
+```
+
+**2 · A decisão que isso trava**, uma só, a mais importante, com o porquê.
+
+**3 · O que vem agora**, nomeado em linguagem de gente.
+
+**4 · Posso seguir?**
+
+### As cinco regras da checklist
+
+1. **Ela sai da checklist da própria etapa**, que está no fim de cada skill.
+   Não invente itens na hora, e não repita item que não mudou nada.
+2. **O que não passou aparece.** Com `○` e o motivo, nunca escondido. Item
+   omitido é o que faz a pessoa aprovar no escuro.
+3. **Cada linha diz o resultado, não a tarefa.** "4 concorrentes abertos" e não
+   "fiz o estudo de mercado". "Cores tiradas do logo" e não "tratei a marca".
+4. **Nada de item de processo.** "Li os arquivos", "analisei o briefing" e
+   "apliquei o método" não são entregas, são respiração.
+5. **Oito linhas é o teto.** Se passou disso, a etapa entregou coisa demais sem
+   pedir aval, e o problema é esse, não a checklist.
 
 **No modo automático**, esse mesmo formato acontece **uma vez**, no fim do P,
 com o plano completo e um único pedido de aval. Depois disso, silêncio até a
-entrega, exceto nas paradas obrigatórias.
+entrega, exceto nas paradas obrigatórias, e **nelas a checklist também vem**:
+é o único momento em que a pessoa vê o que foi feito antes de autorizar o
+próximo trecho.
 
 Dá pra trocar de modo no meio, e é comum. Quem começa acompanhando costuma
 liberar o resto depois de duas etapas.
@@ -336,6 +369,8 @@ carregam sozinhas quando o assunto aparece. Se precisar puxar à mão:
 - [ ] Material base pedido no começo do P, salvo em `base/` e registrado
 - [ ] `COPY.md` liberado pela pessoa antes de qualquer HTML, e sem `[confirmar:` sobrando
 - [ ] Na letra D, o plano de imagem decidido e a chave de API recomendada se faltar
+- [ ] Todo pedido de permissão veio acompanhado da checklist do que foi feito
+- [ ] O que não passou apareceu com `○` e o motivo, nunca foi omitido
 - [ ] Nenhum dado de negócio inventado
 - [ ] Paradas obrigatórias respeitadas mesmo no automático
 - [ ] Vocabulário interno nunca apareceu na conversa

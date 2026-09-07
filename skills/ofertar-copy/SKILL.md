@@ -172,6 +172,29 @@ ação irreversível).
 
 ---
 
+## Antes de pedir permissão pra seguir
+
+**Mostre o que você fez, como checklist marcada.** A pessoa não tem como saber
+se o trabalho aconteceu ou se você só disse que aconteceu.
+
+```
+✓ <o resultado, não a tarefa>
+✓ <outro resultado>
+✓ PROJETO.md atualizado
+○ <o que não passou, com o motivo>
+○ <o que está esperando resposta dela>
+```
+
+Quatro regras: de cinco a oito linhas; **o que não passou aparece com `○` e o
+motivo**, nunca escondido; cada linha diz o resultado ("4 concorrentes
+abertos"), não a tarefa ("fiz o estudo de mercado"); e nada de item de processo
+tipo "li os arquivos".
+
+Depois da checklist vêm três linhas: **a decisão** que isso trava e o porquê,
+**o que vem agora**, e **posso seguir?**
+
+---
+
 ## Checklist
 
 - [ ] Os seis itens de `projetar` estão por escrito antes da primeira linha
