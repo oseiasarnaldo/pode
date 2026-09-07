@@ -119,10 +119,33 @@ Com máscara a imagem some e o fundo aparece por baixo, **qualquer que ele
 seja**. Terminar num gradiente de cor fixa quase nunca fecha, porque o card
 costuma ter uma camada semitransparente por cima.
 
-### 4 · Grão na página inteira, entre 2 e 8%
+### 4 · Grão na página, e textura de matéria nas dobras
 
-Fundo chapado parece plástico. Um `feTurbulence` inline, sem arquivo externo.
-Se dá pra ver que existe, está forte demais.
+Duas coisas diferentes, e as duas faltam quando a página parece plástico.
+
+**O grão** é global: um `feTurbulence` inline, entre 2 e 8%, sem arquivo
+externo. Se dá pra ver que existe, está forte demais.
+
+**A textura de matéria** é por dobra, e é o que dá corpo: madeira, papel,
+concreto, tecido, metal escovado. Ela entra como camada de fundo, escurecida,
+dessaturada e **mascarada onde o texto mora**. É o item mais barato do piso
+inteiro, porque uma textura de acervo resolve, e é o que mais muda a sensação
+de "isso foi feito por alguém".
+
+> **Fundo liso é o que sobra quando ninguém decidiu nada.** Se a dobra está
+> sem textura, foi omissão, não escolha.
+
+### 4b · Um conjunto de ícones, um peso só
+
+Ícone não é enfeite, é rótulo, e a página inteira precisa dos mesmos. Onde eles
+sempre cabem: item de oferta, selo de fechamento, marcador do comparativo,
+número de autoridade.
+
+Phosphor no peso Duotone, inlinado como SVG, segunda camada na cor de acento
+entre 45 e 55%, sempre dentro de um chip. **Nunca emoji** (renderiza diferente
+em cada sistema) e **nunca duas bibliotecas** na mesma tela.
+
+→ `icones.md`
 
 ### 5 · Profundidade em duas camadas, nunca uma
 
@@ -193,6 +216,8 @@ abaixo por não ter pensado nisso.
 - [ ] `.js` na regra de ocultar, posta pelo próprio script
 - [ ] Máscara em toda imagem que encosta no fundo
 - [ ] Grão na página, entre 2 e 8%
+- [ ] Textura de matéria nas dobras, mascarada onde o texto mora
+- [ ] Um conjunto de ícones, um peso, em chip
 - [ ] Sombra em duas camadas, e borda de luz no dark
 - [ ] `svh` e não `vh` na altura de dobra
 - [ ] `prefers-reduced-motion` em tudo que se move

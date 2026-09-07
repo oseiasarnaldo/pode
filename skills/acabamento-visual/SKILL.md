@@ -57,13 +57,46 @@ texto.
 
 ---
 
+## As duas perguntas que abrem a letra D
+
+**Não decida isso sozinho. Pergunte, sempre, antes de desenhar.** Elas mudam o
+que é possível na página inteira, e a pessoa não sabe que estão em jogo se você
+não abrir a boca.
+
+**1 · "Posso gerar imagem por IA neste projeto?"**
+
+Diga junto o que ela precisa pra decidir, em duas linhas:
+
+> Dá pra gerar arte sob medida pra essa página, com a cara da sua marca, em vez
+> de usar acervo. Custa por imagem gerada (centavos a alguns reais cada, não
+> assinatura) e precisa de uma chave do Google configurada uma vez. Sem isso a
+> página fica boa do mesmo jeito, com textura de acervo e peça desenhada. Você
+> prefere qual?
+
+Se ela disser sim e a chave não estiver configurada, **ofereça configurar na
+hora**: `../setup-ambiente/references/apis.md`. Não é trabalho dela caçar isso.
+
+Se disser não, siga sem drama e **sem voltar a insistir no meio do caminho**.
+
+**2 · "Tem foto própria, ou dá pra tirar hoje?"**
+
+Do lugar, de quem ensina, do material, do produto na mão. Celular resolve. Numa
+escola ou num curso, isso vale mais que qualquer acervo, porque **é prova**, e
+custa zero.
+
+> **A pergunta 1 é a que mais se esquece, e é a que mais muda o resultado.**
+> Ela apareceu num projeto real: a pessoa teve que pedir a geração de imagem
+> porque o agente nunca ofereceu. Perguntar custa uma linha.
+
+---
+
 ## O piso de acabamento
 
 Esta skill descreve dezenas de técnicas, e dá pra ler tudo e entregar uma
 página **chapada**: imagem colada em fundo liso, sem entrada, sem máscara, sem
 luz. Catálogo não obriga nada, então existe um piso.
 
-**Sete itens, e nenhuma página é entregue abaixo deles:**
+**Oito itens, e nenhuma página é entregue abaixo deles:**
 
 1. Dobra de abertura com **quatro camadas nomeadas** (textura, grade e scrim,
    luz de marca, grão), cada uma com z-index próprio
@@ -72,9 +105,14 @@ luz. Catálogo não obriga nada, então existe um piso.
 3. **Entrada no scroll** (`data-reveal`) nos blocos de conteúdo, cascata de
    110ms
 4. **Máscara** em toda imagem que encosta no fundo
-5. **Grão** na página inteira, entre 2 e 8%
-6. **Sombra em duas camadas**, e borda de luz no escuro
-7. **`prefers-reduced-motion`** em tudo que se move
+5. **Grão** na página inteira, entre 2 e 8%, e **textura de matéria** onde a
+   dobra pede corpo: madeira, papel, concreto, tecido. Fundo liso é o que
+   sobra quando ninguém decidiu nada
+6. **Um conjunto de ícones**, um peso só, em chip: rótulo de item de oferta,
+   selo de fechamento, marcador de comparativo. Nunca emoji, nunca duas
+   bibliotecas
+7. **Sombra em duas camadas**, e borda de luz no escuro
+8. **`prefers-reduced-motion`** em tudo que se move
 
 Tem um medidor no fim do arquivo de referência: ele conta o que existe no CSS
 aplicado e diz o que está abaixo do piso. **Rode antes de entregar**, do mesmo
@@ -197,6 +235,7 @@ aquela dobra e em que papel**:
 
 | Dobra | Papel | O que ela costuma pedir |
 |---|---|---|
+| **Toda dobra** | ambiente | **textura de matéria** no fundo, mascarada onde o texto mora. Fundo liso é o que sobra quando ninguém decidiu nada |
 | Título e abertura | ambiente **mais** elucidação | **uma composição, não uma imagem.** Três camadas no mínimo: o motivo principal, algo atrás com profundidade, e a luz da marca. Se há expert, a foto na frente e a demonstração do resultado atrás do ombro |
 | Proposta de valor | **elucidação** | é a dobra que mais precisa: um quadro por passo do método, mostrando o artefato de cada etapa. Ícone genérico por card não elucida, só rotula |
 | Benefícios comparativos | **elucidação** | o jeito antigo contra o novo no mesmo desenho, ou as duas colunas com contraste visual de verdade: marcador cheio contra vazio, a coluna perdedora dessaturada |
@@ -250,6 +289,21 @@ legibilidade é alinhamento exato e texto nítido.
 ### 7. Audite antes de declarar pronto
 
 Nunca entregue no "acho que está bom". Meça.
+
+**Dois auditores, e os dois são obrigatórios antes de mostrar a página:**
+
+```
+scripts/audita-contraste.js    reprovação de contraste, lista vazia é aprovado
+scripts/audita-acabamento.js   piso de acabamento, item a item
+```
+
+**`ABAIXO` não é entregável.** Se o medidor acusar, conserte e rode de novo. Se
+a página é seca de propósito, escreva o motivo no `PROJETO.md` **antes** de
+entregar, não depois que a pessoa reclamar.
+
+O defeito que mais escapa é a **máscara**: imagem grande com borda reta colada
+no fundo. O auditor lista as imagens sem máscara com nome, então não tem como
+não ver.
 
 → `references/auditoria-visual.md` e os scripts em `scripts/`
 
@@ -501,4 +555,7 @@ Não entregue sem passar por aqui:
 - [ ] `prefers-reduced-motion` respeitado
 - [ ] Expert no primeiro frame em 390, 768 e 1440, quando ele é parte da oferta
 - [ ] Os 12 erros acima, todos verificados
+- [ ] Perguntado se pode gerar imagem por IA, e se tem foto própria
+- [ ] Textura de matéria em toda dobra, e um conjunto de ícones só
+- [ ] Máscara em toda imagem grande, conferida pelo auditor e não a olho
 - [ ] Medidor do piso de acabamento rodado, sem item `ABAIXO` por esquecimento
