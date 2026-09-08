@@ -104,15 +104,15 @@ responder. Não precisa ser útil, precisa provar que está vivo.
 Um comando, e é o mesmo comando pra atualizar depois:
 
 ```
-git clone https://github.com/oseiasarnaldo/pode.git ~/.claude/skills/pode
+git clone https://github.com/oseiasarnaldo/pode.git ~/.claude/skills/pitangus
 ```
 
 Feche e abra o terminal. O que importa mais que o comando: o método fica **na
 sua máquina**, funciona em todos os projetos, e quando sair versão nova é só
 rodar `git pull` na mesma pasta. Você não precisa voltar aqui.
 
-**Teste:** dentro do Claude Code, digite `/pode`. Se ele responder puxando o
-método, está instalado.
+**Teste:** dentro do Claude Code, digite `/pitangus`. Se ele responder puxando
+o método, está instalado.
 
 ---
 
@@ -197,7 +197,7 @@ uma ferramenta que você só usaria daqui a três semanas.
 - [ ] `pwd` respondeu com um caminho
 - [ ] `claude --version` respondeu com um número
 - [ ] Login feito
-- [ ] Método instalado, e `/pode` respondendo
+- [ ] Método instalado, e `/pitangus` respondendo
 - [ ] Você escolheu onde seus projetos moram, e criou a pasta do primeiro lá
 - [ ] Uma página pedida ao agente e aberta no navegador
 - [ ] Nenhuma camada além da primeira instalada por enquanto

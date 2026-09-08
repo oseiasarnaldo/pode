@@ -57,7 +57,7 @@ No Windows: `winget install ffmpeg` e baixe o `libwebp` do site oficial.
 ## Geração por IA
 
 Qualquer gerador serve, desde que você aplique o DNA de
-`references/midia-ia.md` em todo prompt.
+`midia-ia.md` em todo prompt.
 
 Se for usar a API do Gemini por REST, dois avisos:
 

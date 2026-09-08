@@ -4,7 +4,7 @@
 sob medida**. Página com arte própria tem uma cara que banco de imagem não dá,
 mas ela não é pré-requisito de página boa. As quatro origens de imagem, e
 quando cada uma vale, estão em
-`../acabamento-visual/references/de-onde-vem-a-imagem.md`: desenhar cobre a
+`../../acabamento-visual/references/de-onde-vem-a-imagem.md`: desenhar cobre a
 maioria, e o Pixabay cobre quase todo o resto, de graça.
 
 Leia este arquivo quando decidir que quer arte gerada, não antes.

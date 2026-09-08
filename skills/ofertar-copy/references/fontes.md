@@ -10,7 +10,7 @@ resumo, este arquivo incluído.
 **Eugene Schwartz**, *Breakthrough Advertising* (1966).
 Os níveis de consciência. Aqui eles aparecem só como consequência: quanto a
 pessoa já sabe define por onde o texto começa. O diagnóstico em si é trabalho
-de `projetar`, em `../projetar/references/consciencia-e-argumento.md`.
+de `projetar`, em `../../projetar/references/consciencia-e-argumento.md`.
 
 **Elias St. Elmo Lewis** (1898), a sequência conhecida como AIDA.
 Atenção, interesse, desejo, ação. Sobrevive há mais de um século porque descreve
@@ -22,7 +22,7 @@ a ordem em que a atenção se comporta, não uma técnica de escrita.
 
 Os autores que sustentam a arquitetura da oferta (Dan Kennedy, Jay Abraham, Ryan
 Deiss, Russell Brunson, Frank Kern, Mark Ford, Alex Hormozi) estão citados em
-`../projetar/references/fontes.md`, porque a decisão da oferta mora lá.
+`../../projetar/references/fontes.md`, porque a decisão da oferta mora lá.
 
 Desta skill, o que se aproveita deles é um ponto só, e é de **Hormozi**: o que
 mais pesa no fechamento não é o desconto, é a pessoa sentir que você fala da dor

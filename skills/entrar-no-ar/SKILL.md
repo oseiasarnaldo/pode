@@ -181,7 +181,7 @@ Depois da checklist vêm três linhas: **a decisão** que isso trava e o porquê
 
 ## Checklist
 
-- [ ] Checklist de `antes-de-subir.md` cumprido antes do primeiro envio
+- [ ] Checklist de `references/antes-de-subir.md` cumprido antes do primeiro envio
 - [ ] Segredos no cofre, nunca no projeto, `.gitignore` antes do primeiro commit
 - [ ] Arquivo no ar confirmado por `curl`, não por suposição
 - [ ] Cache purgado, se a hospedagem tem proxy na frente
@@ -189,6 +189,6 @@ Depois da checklist vêm três linhas: **a decisão** que isso trava e o porquê
 - [ ] Domínio, canônica e `og:image` apontando pro endereço final
 - [ ] Indexação liberada no dia do lançamento, nos dois lugares (HTML e config)
 - [ ] Pixel disparando, conferido no navegador e não só no código
-- [ ] Assinatura de autoria aplicada, e conferida com `verificar-assinatura.py`
+- [ ] Assinatura de autoria aplicada, e conferida com `assets/verificar-assinatura.py`
 - [ ] Nome do projeto e data de publicação anotados no `PROJETO.md` (sem eles o carimbo dos assets não se recalcula)
-- [ ] `auditoria-publicacao.md` rodada, com as notas registradas
+- [ ] `references/auditoria-publicacao.md` rodada, com as notas registradas

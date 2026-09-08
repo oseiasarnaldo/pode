@@ -66,7 +66,7 @@ Um diagnóstico do que está no ar. Sem isso você melhora no escuro:
 
 1. **Rodar a auditoria de publicação na página atual** e anotar os números.
    São eles que provam o ganho depois, e sem o "antes" não existe prova.
-   → `../entrar-no-ar/references/auditoria-publicacao.md`
+   → `../../entrar-no-ar/references/auditoria-publicacao.md`
 2. **Ler a página inteira** e marcar, bloco a bloco: fica, sai, reescreve.
 3. **Descobrir o que já foi testado**: que anúncio manda tráfego pra lá, que
    headline já rodou, o que o time comercial ouve de quem chega por ali.
