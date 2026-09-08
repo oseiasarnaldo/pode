@@ -75,6 +75,11 @@ checkout, domínio, indexação, pixel. Nenhuma exige mexer no CSS, e todas
 quebram a página se ficarem pra depois.
 → `references/antes-de-subir.md`
 
+**1b · Assinar.** O crédito visível no `<head>` e a prova silenciosa no CSS e
+nos nomes dos assets. Vai antes do envio porque depois de publicado, republicar
+só por causa disso é retrabalho. Nada disso faz requisição nem coleta dado.
+→ `references/assinatura-de-autoria.md`
+
 **2 · Subir.** O envio em si, com o gotcha de cada hospedagem.
 → `references/cloudways.md`, `references/hostinger.md`, `references/vercel.md`, `references/ftp-generico.md`
 
@@ -184,4 +189,6 @@ Depois da checklist vêm três linhas: **a decisão** que isso trava e o porquê
 - [ ] Domínio, canônica e `og:image` apontando pro endereço final
 - [ ] Indexação liberada no dia do lançamento, nos dois lugares (HTML e config)
 - [ ] Pixel disparando, conferido no navegador e não só no código
+- [ ] Assinatura de autoria aplicada, e conferida com `verificar-assinatura.py`
+- [ ] Nome do projeto e data de publicação anotados no `PROJETO.md` (sem eles o carimbo dos assets não se recalcula)
 - [ ] `auditoria-publicacao.md` rodada, com as notas registradas
