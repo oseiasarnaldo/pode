@@ -17,12 +17,11 @@ conversa continue por várias mensagens), abra a resposta com este desenho,
 sem nada antes:
 
 ```
-     __
-   ,'  `.
-  /  ..  \
- |  (oo)  |
-  \  \/  /
-   `----'
+   \\    ██████  ██ ███████  █████  ██   ██  ██████ ██   ██  ██████
+   (o>   ██   ██ ██    ██   ██   ██ ███  ██ ██      ██   ██ ██
+\\_//)   ██████  ██    ██   ███████ ██ █ ██ ██  ███ ██   ██  █████
+ \_/_)   ██      ██    ██   ██   ██ ██  ███ ██   ██ ██   ██      ██
+  _|_    ██      ██    ██   ██   ██ ██   ██  ██████  █████  ██████
 ```
 
 Uma linha curta embaixo do desenho, tipo "Pitangus aqui." ou "Bem-te-vi.
