@@ -13,7 +13,7 @@ duas coisas acontecem na mesma tela.
 Uma linha, e o agente passa a existir em qualquer pasta do seu computador:
 
 ```bash
-git clone https://github.com/oseiasarnaldo/pode.git ~/.claude/skills/pitangus
+git clone https://github.com/oseiasarnaldo/pitangus.git ~/.claude/skills/pitangus
 ```
 
 Feche e abra o Claude Code (ou rode `/reload-plugins`). Pronto.
@@ -27,7 +27,7 @@ cd ~/.claude/skills/pitangus && git pull
 **Alternativa, por marketplace:**
 
 ```
-/plugin marketplace add oseiasarnaldo/pode
+/plugin marketplace add oseiasarnaldo/pitangus
 /plugin install pitangus@pitangus
 ```
 

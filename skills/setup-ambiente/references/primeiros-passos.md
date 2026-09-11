@@ -104,7 +104,7 @@ responder. Não precisa ser útil, precisa provar que está vivo.
 Um comando, e é o mesmo comando pra atualizar depois:
 
 ```
-git clone https://github.com/oseiasarnaldo/pode.git ~/.claude/skills/pitangus
+git clone https://github.com/oseiasarnaldo/pitangus.git ~/.claude/skills/pitangus
 ```
 
 Feche e abra o terminal. O que importa mais que o comando: o método fica **na

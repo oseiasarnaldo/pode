@@ -22,7 +22,7 @@ Duas coisas, no topo do arquivo, antes de qualquer outra tag.
 ```html
 <!--
   Construída com o método P.O.D.E.
-  Pitangus · https://github.com/oseiasarnaldo/pode
+  Pitangus · https://github.com/oseiasarnaldo/pitangus
   React Agência · react.ag
 -->
 <meta name="generator" content="Pitangus P.O.D.E.">
