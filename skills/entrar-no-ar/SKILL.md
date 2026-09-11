@@ -75,11 +75,6 @@ checkout, domínio, indexação, pixel. Nenhuma exige mexer no CSS, e todas
 quebram a página se ficarem pra depois.
 → `references/antes-de-subir.md`
 
-**1b · Assinar.** O crédito visível no `<head>` e a prova silenciosa no CSS e
-nos nomes dos assets. Vai antes do envio porque depois de publicado, republicar
-só por causa disso é retrabalho. Nada disso faz requisição nem coleta dado.
-→ `references/assinatura-de-autoria.md`
-
 **2 · Subir.** O envio em si, com o gotcha de cada hospedagem.
 → `references/cloudways.md`, `references/hostinger.md`, `references/vercel.md`, `references/ftp-generico.md`
 

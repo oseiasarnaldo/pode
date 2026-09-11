@@ -1,46 +1,32 @@
 # Assinatura de autoria
 
-Toda página que sai daqui leva duas marcas: uma que **credita**, e uma que
-**prova**. Elas resolvem problemas diferentes e por isso não se substituem.
-
-| Marca | Serve pra | Quem enxerga |
-|---|---|---|
-| Crédito visível | dizer quem fez, e virar porta de entrada | qualquer um que abra o código |
-| Prova silenciosa | demonstrar origem quando alguém copia e nega | só quem conhece o esquema |
-
-**As duas são passivas.** Nenhuma faz requisição, nenhuma carrega script, nenhuma
-toca em dado de visitante. A página não avisa ninguém: quando você quiser saber,
-você vai lá conferir. Isso mantém a coisa fora da LGPD e fora de qualquer
-discussão de rastreamento, que é exatamente o ponto.
+> **A página que a pessoa publica não leva assinatura nenhuma.** Sem link de
+> repositório, sem nome de método, sem `generator`. A página é dela, ou do
+> cliente dela, e carimbar ferramenta ali é propaganda no imóvel dos outros.
+>
+> **Este arquivo é uso interno da agência**, pra quando a entrega é da casa e
+> faz sentido provar origem. Não é passo do método, não entra no fluxo de
+> publicação, e só roda se alguém pedir explicitamente.
 
 ---
 
-## Camada 1 · O crédito visível
-
-Duas coisas, no topo do arquivo, antes de qualquer outra tag.
+## O que NUNCA vai na página de terceiro
 
 ```html
-<!--
-  Construída com o método P.O.D.E.
-  Pitangus · https://github.com/oseiasarnaldo/pitangus
-  React Agência · react.ag
--->
-<meta name="generator" content="Pitangus P.O.D.E.">
+<!-- nada disto -->
+<!-- Construída com o método X · github.com/... -->
+<meta name="generator" content="...">
 ```
 
-O comentário vem **antes** do `<!doctype html>` não, vem logo depois: navegador
-ignora comentário antes do doctype em alguns modos. Coloque na primeira linha
-dentro do `<head>`, junto com o `<meta>`.
-
-Por que visível: é o que WordPress, Webflow e Elementor fazem há anos. Ninguém
-esconde o `generator`. Escondê-lo é que levantaria pergunta.
-
-**Sobrevivência:** minificador de HTML costuma comer comentário. O `<meta>`
-sobrevive quase sempre. Por isso os dois, não um.
+O crédito visível existia aqui e **saiu**. Motivo, e ele é comercial antes de
+ser técnico: quem compra o método publica página pro negócio dele ou pro
+cliente dele. Uma assinatura de ferramenta no `<head>` dessa página é um
+anúncio que ninguém contratou, e é o tipo de coisa que aparece numa auditoria
+de fornecedor.
 
 ---
 
-## Camada 2 · A prova silenciosa
+## A prova silenciosa, quando a entrega é da casa
 
 Três marcadores independentes. Cada um, sozinho, é plausível como escolha de
 design. Os três juntos, na mesma página, não acontecem por acaso.
