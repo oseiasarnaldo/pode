@@ -45,7 +45,7 @@ Enquanto a página é rascunho, ela fica bloqueada pra busca. No dia do
 lançamento, esse bloqueio sai.
 
 **Ele costuma estar em dois lugares**: a meta tag no HTML e um cabeçalho na
-configuração do servidor (`vercel.json`, `.htaccess`). Tirar só um deixa a
+configuração do servidor (`../assets/vercel.json`, `.htaccess`). Tirar só um deixa a
 página invisível pro Google sem explicação aparente. É o erro mais comum do dia
 do lançamento.
 
@@ -115,4 +115,4 @@ três meses, você ou outra pessoa vai olhar e achar que foi esquecimento, e vai
 - [ ] Bloqueio de indexação removido nos **dois** lugares, no dia certo
 - [ ] Pixel disparando, conferido no navegador
 - [ ] Pastas de bruto, ferramenta e QA fora do envio
-- [ ] Checklist de `auditoria-visual.md` fechado antes de subir
+- [ ] Checklist de `../../acabamento-visual/references/auditoria-visual.md` fechado antes de subir

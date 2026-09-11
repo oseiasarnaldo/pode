@@ -63,7 +63,7 @@ qualquer hospedagem.
 
 Como a Hostinger usa Apache, o `.htaccess` tende a valer também pra arquivo
 estático, diferente da Cloudways. Isso torna o modelo em
-`assets/htaccess-modelo.txt` mais útil aqui do que lá: compressão, cache por
+`../assets/htaccess-modelo.txt` mais útil aqui do que lá: compressão, cache por
 tipo de arquivo, e o `noindex` enquanto a página é protótipo.
 
 ---

@@ -75,7 +75,7 @@ curl -s https://seudominio.com.br/oferta/ | grep 'algo-que-so-existe-na-versao-n
 
 A maioria das hospedagens compartilhadas usa Apache, e aí o `.htaccess` na pasta
 controla compressão, cache por tipo de arquivo e bloqueio de indexação. Modelo
-em `assets/htaccess-modelo.txt`.
+em `../assets/htaccess-modelo.txt`.
 
 Se o servidor for nginx, o `.htaccess` é ignorado e a configuração fica no
 painel ou com o suporte.

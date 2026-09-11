@@ -7,7 +7,7 @@ A diferença entre "acho que está bom" e "está bom" é um número.
 Tudo aqui roda em `localhost`, antes de publicar: contraste, responsivo,
 estabilidade e peso do primeiro carregamento. O que só dá pra medir com a URL no
 ar (nota de carregamento, mobile real, leitura por agente) é a skill
-`entrar-no-ar`, em `../entrar-no-ar/references/auditoria-publicacao.md`.
+`entrar-no-ar`, em `../../entrar-no-ar/references/auditoria-publicacao.md`.
 
 ---
 
@@ -33,7 +33,7 @@ Revisão de código teria aprovado os seis.
 
 Os três scripts em `scripts/` são JavaScript puro. Não precisam de instalação.
 
-`audita-acabamento.js` é o mais rápido de rodar e o que mais pega página
+`../scripts/audita-acabamento.js` é o mais rápido de rodar e o que mais pega página
 chapada: ele conta luz, entrada, máscara, grão e desfoque no CSS aplicado, e
 diz o que está abaixo do piso. Roda **por http**, não por `file://`, senão o
 navegador bloqueia a leitura das folhas de estilo.
@@ -53,7 +53,7 @@ e dê Enter.
 Regra WCAG AA: **4,5:1** para texto normal, **3:1** para texto grande (24px, ou
 18,66px em peso 700).
 
-`scripts/audita-contraste.js` percorre todo texto da página, resolve o fundo real
+`../scripts/audita-contraste.js` percorre todo texto da página, resolve o fundo real
 (subindo a árvore até achar um ancestral opaco), compõe a cor com o próprio alpha
 e devolve só o que reprova. Lista vazia significa página aprovada.
 
@@ -67,7 +67,7 @@ Dois cuidados que fazem o script valer alguma coisa:
 
 ### Responsivo
 
-`scripts/audita-responsivo.js` verifica overflow do documento, elementos
+`../scripts/audita-responsivo.js` verifica overflow do documento, elementos
 estourando a viewport, alvos de toque e o estado de cada grid.
 
 **Rode uma vez por largura.** Larguras que importam: 360, 390, 430, 600, 768,
@@ -141,5 +141,5 @@ Todas descartáveis. Nenhuma vai para o ar.
 - [ ] Nenhuma imagem quebrada
 
 Passou nos oito, a página está pronta pra subir. A partir daí é
-`entrar-no-ar`, em `../entrar-no-ar/references/auditoria-publicacao.md`: nota de
+`entrar-no-ar`, em `../../entrar-no-ar/references/auditoria-publicacao.md`: nota de
 carregamento, mobile no ar e leitura por agente.

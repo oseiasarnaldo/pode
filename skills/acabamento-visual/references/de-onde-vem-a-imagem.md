@@ -147,7 +147,7 @@ conta: uma cena específica do negócio, uma série de peças que precisam parec
 do mesmo ensaio, um objeto que não existe pronto.
 
 - O DNA de prompt e os erros comuns: `midia-ia.md`
-- A chave e o faturamento: `../setup-ambiente/references/apis.md`
+- A chave e o faturamento: `../../setup-ambiente/references/apis.md`
 
 **Não empurre esse caminho.** Ofereça as três origens de cima primeiro, e diga
 que essa custa. Muita gente não vai querer ligar faturamento pra fazer uma

@@ -114,7 +114,7 @@ haveria conversa.
 Consequência prática:
 
 - **A camada 1 (terminal e agente) vive fora da conversa.** É o passo a passo
-  escrito de `../setup-ambiente/references/primeiros-passos.md`. Nenhum agente
+  escrito de `../../setup-ambiente/references/primeiros-passos.md`. Nenhum agente
   resolve isso, por definição.
 - **As camadas 2 a 4 vivem dentro.** Quando faltar a ferramenta, resolva na hora
   e siga: "pra eu conseguir medir a página sozinho, falta uma coisa de dois

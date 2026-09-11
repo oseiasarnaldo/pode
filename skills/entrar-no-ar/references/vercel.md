@@ -21,7 +21,7 @@ da conversa antes de o envio começar. A CLI manda direto, sem intermediário.
 
 ## A armadilha que quebrou três páginas
 
-Um `vercel.json` copiado de projeto anterior marcava **tudo** dentro de
+Um `../assets/vercel.json` copiado de projeto anterior marcava **tudo** dentro de
 `/assets` como `immutable` por um ano, incluindo css e js.
 
 O problema: `immutable` diz ao navegador "esse arquivo nunca muda, nem
@@ -38,7 +38,7 @@ A regra que resolve, e que vale em qualquer hospedagem:
 | css e js | `max-age=0, must-revalidate` | mesmo nome, conteúdo novo a cada deploy |
 | HTML | `max-age=0, must-revalidate` | é o arquivo que aponta pra todos os outros |
 
-Modelo pronto em `assets/vercel.json`.
+Modelo pronto em `../assets/vercel.json`.
 
 A alternativa mais robusta é colocar hash no nome do arquivo gerado
 (`lp.a3f9c1.css`), e aí tudo pode ser `immutable`. Exige passo de build, e vale
@@ -65,7 +65,7 @@ não sobe.
 
 Página de teste indexada no Google é problema real: ela concorre com a oficial,
 e o cliente descobre pelo lugar errado. Enquanto for protótipo, bloqueie por
-cabeçalho no `vercel.json`, além da meta tag no HTML.
+cabeçalho no `../assets/vercel.json`, além da meta tag no HTML.
 
 São **dois lugares**, e esquecer um deles é o erro clássico do dia do
 lançamento: sai a meta tag do HTML, fica o cabeçalho do servidor, e a página
@@ -76,7 +76,7 @@ segue invisível pro Google sem ninguém entender por quê.
 ## Checklist
 
 - [ ] Publicado pela CLI, de dentro da pasta certa
-- [ ] `vercel.json` com css e js revalidando, só mídia como `immutable`
+- [ ] `../assets/vercel.json` com css e js revalidando, só mídia como `immutable`
 - [ ] `.vercelignore` cobrindo fonte, ferramenta, bruto e documentação
 - [ ] Bloqueio de indexação enquanto protótipo, e liberado nos **dois** lugares
       no dia do lançamento

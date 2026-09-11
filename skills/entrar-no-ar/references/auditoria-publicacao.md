@@ -6,7 +6,7 @@ Por isso esta auditoria vem **depois** de publicar, e por isso ela tem esse
 nome.
 
 O que roda antes de subir é a skill `acabamento-visual`, em
-`../acabamento-visual/references/auditoria-visual.md`. Se aquela lista ainda tem item aberto,
+`../../acabamento-visual/references/auditoria-visual.md`. Se aquela lista ainda tem item aberto,
 volte pra lá: acelerar uma página que reprova em contraste é otimizar o
 lugar errado.
 
@@ -131,7 +131,7 @@ Quem procura curso hoje pergunta pra um assistente antes de pesquisar no Google.
 Uma página que o agente não consegue ler não entra na resposta, e você não fica
 sabendo que perdeu. Esse bloco existe por isso.
 
-### 1 · `llms.txt`
+### 1 · `../assets/llms.txt`
 
 Arquivo em `/llms.txt`, na raiz, em markdown. A ordem é definida pela
 especificação e não é livre:
@@ -142,11 +142,11 @@ especificação e não é livre:
 4. seções `##` com listas de links no formato `[nome](url): descrição`
 
 Uma seção `## Optional`, por convenção, marca o que o agente pode pular quando
-precisa de contexto curto. Modelo pronto em `assets/llms.txt`.
+precisa de contexto curto. Modelo pronto em `../assets/llms.txt`.
 
 Numa página de oferta, o que o agente precisa saber é o que qualquer pessoa
 perguntaria: o que é, pra quem, quanto custa, onde compra, qual a garantia, como
-falar com alguém. Junto do `llms.txt` vão o `robots.txt` e o `sitemap.xml`, que
+falar com alguém. Junto do `../assets/llms.txt` vão o `../assets/robots.txt` e o `sitemap.xml`, que
 costumam faltar em LP.
 
 ### 2 · Hierarquia de conteúdo
@@ -185,7 +185,7 @@ proposital** (anota o motivo e segue).
 - [ ] Imagens no formato e no recorte em que aparecem, com `width` e `height`
 - [ ] Nenhum css ou js servido como `immutable` sem hash no nome
 - [ ] Checklist de `antes-de-subir.md` cumprido: checkout, domínio, indexação
-- [ ] `llms.txt`, `robots.txt` e `sitemap.xml` no ar e acessíveis
+- [ ] `../assets/llms.txt`, `../assets/robots.txt` e `sitemap.xml` no ar e acessíveis
 - [ ] Um `h1` só, `h2` por dobra, nenhum nível pulado
 - [ ] Auditoria agêntica rodada, reprovações classificadas
 - [ ] Reprovação de SEO ou boas práticas explicada, não ignorada

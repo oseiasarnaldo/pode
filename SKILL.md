@@ -17,11 +17,11 @@ conversa continue por várias mensagens), abra a resposta com este desenho,
 sem nada antes:
 
 ```
-   \\    ██████  ██ ███████  █████  ██   ██  ██████ ██   ██  ██████
-   (o>   ██   ██ ██    ██   ██   ██ ███  ██ ██      ██   ██ ██
-\\_//)   ██████  ██    ██   ███████ ██ █ ██ ██  ███ ██   ██  █████
- \_/_)   ██      ██    ██   ██   ██ ██  ███ ██   ██ ██   ██      ██
-  _|_    ██      ██    ██   ██   ██ ██   ██  ██████  █████  ██████
+   \\    ████ ███ ███ ████ █  █ ████ █  █ ████
+   (o>   █  █  █   █  █  █ ██ █ █    █  █ █
+\\_//)   ████  █   █  ████ █ ██ █ ██ █  █ ████
+ \_/_)   █     █   █  █  █ █  █ █  █ █  █    █
+  _|_    █    ███  █  █  █ █  █ ████ ████ ████
 ```
 
 Uma linha curta embaixo do desenho, tipo "Pitangus aqui." ou "Bem-te-vi.
@@ -369,9 +369,9 @@ A última seção é a que mais salva.
 Você tem a condução. O detalhe de cada etapa está nas skills irmãs, e elas
 carregam sozinhas quando o assunto aparece. Se precisar puxar à mão:
 
-- `skills/projetar/references/conducao.md` — como conversar durante o P
-- `skills/projetar/references/modos-de-operacao.md` — o que muda em cada modo
-- `skills/projetar/references/tipo-de-projeto.md` — do zero contra uplift
+- `skills/projetar/references/conducao.md`, como conversar durante o P
+- `skills/projetar/references/modos-de-operacao.md`, o que muda em cada modo
+- `skills/projetar/references/tipo-de-projeto.md`, do zero contra uplift
 
 ---
 

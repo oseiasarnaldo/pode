@@ -1,6 +1,6 @@
 # O texto de cada dobra
 
-O par de `../projetar/references/dobras.md`. Lá se define **o que** cada dobra
+O par de `../../projetar/references/dobras.md`. Lá se define **o que** cada dobra
 resolve. Aqui, **o que o texto precisa fazer** dentro dela.
 
 Se o argumento pediu uma ordem diferente do default, siga o argumento: o que
