@@ -68,15 +68,47 @@ claude mcp add chrome-devtools npx chrome-devtools-mcp@latest --browser-url=http
 
 ## Camada 3 · Mídia
 
-| Ferramenta | Como instalar |
-|---|---|
-| **ffmpeg** | `winget install Gyan.FFmpeg` |
-| **webp** (cwebp) | não tem pacote oficial no winget. Baixe o `libwebp` do site do Google, descompacte, e ponha a pasta `bin` no PATH |
-| **Pillow** | `py -m pip install Pillow` |
-| **fontTools** | `py -m pip install fonttools brotli` |
+Só quando você chegar na letra D e quiser vídeo de fundo ou arte própria. Se a
+sua página vai usar foto que você já tem, pule esta camada.
 
-Se o `winget` não existir na sua máquina, ele vem no "Instalador de Aplicativo"
-da Microsoft Store.
+**Os dois que importam saem do winget, num comando cada:**
+
+```powershell
+winget install -e --id Gyan.FFmpeg
+winget install -e --id Google.Libwebp
+```
+
+O `-e` exige correspondência exata do nome, o que evita instalar um pacote
+parecido de outro autor.
+
+| Ferramenta | Pra quê |
+|---|---|
+| **ffmpeg** | comprimir vídeo, tirar o frame que vira poster, gerar AVIF |
+| **libwebp** (`cwebp`) | converter imagem pra WebP, que é o formato que a página serve |
+| **Pillow** | `py -m pip install Pillow`, só se for rodar script de imagem |
+| **fontTools** | `py -m pip install fonttools brotli`, só se for enxugar fonte |
+
+### O passo que todo mundo esquece
+
+**Feche e abra o terminal depois de instalar.** O Windows só enxerga o programa
+novo numa janela aberta depois da instalação. Se você testar na mesma janela,
+vai dar "não reconhecido" mesmo tendo dado tudo certo, e você vai reinstalar
+achando que falhou.
+
+### Confirme que funcionou
+
+```powershell
+ffmpeg -version
+cwebp -version
+```
+
+Os dois têm que responder com um número de versão. Se responderam, a camada 3
+está fechada.
+
+### Se o winget não existir
+
+Ele vem no **Instalador de Aplicativo**, da Microsoft Store. Instale e abra o
+terminal de novo.
 
 **Alternativa que evita tudo isso:** peça ao agente. Ele lê o erro, descobre o
 que falta e instala, e é literalmente pra isso que ele está ali.
@@ -153,4 +185,6 @@ sim.
 - [ ] `claude --version` respondendo
 - [ ] Caminho do Chrome conferido, se for usar a camada 2
 - [ ] `py -m pip` funcionando, se for usar a camada 3
+- [ ] `ffmpeg -version` e `cwebp -version` respondendo, se for usar mídia
+- [ ] Terminal fechado e reaberto depois de cada instalação
 - [ ] Cofre criado em `$HOME\.config\segredos`, fora da pasta do projeto

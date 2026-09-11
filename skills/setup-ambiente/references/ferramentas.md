@@ -104,7 +104,16 @@ imagem.
 | **webp** | converter imagem pra WebP. O conversor nativo do macOS não faz | `brew install webp` |
 | **Pillow** | ler e processar imagem por script | `pip3 install Pillow` |
 
-No Windows: `winget install ffmpeg`, e o `libwebp` sai do site oficial.
+No Windows, os dois saem do winget, e o `-e` evita instalar um pacote parecido
+de outro autor:
+
+```powershell
+winget install -e --id Gyan.FFmpeg
+winget install -e --id Google.Libwebp
+```
+
+**Feche e abra o terminal depois**, senão o Windows não enxerga o programa novo
+e parece que a instalação falhou. Detalhe completo em `windows.md`.
 
 **Teste:** `ffmpeg -version` precisa responder com a versão.
 
