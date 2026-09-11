@@ -50,8 +50,8 @@ def carimbo(projeto, data):
 
 def credito(html):
     achados = []
-    if re.search(r"<meta[^>]+name=[\"']?generator[\"']?[^>]+pitangus", html, re.I):
-        achados.append("meta generator")
+    # O meta generator saiu do método: página de terceiro não leva assinatura
+    # de ferramenta. Se aparecer, veio de outra origem, então não conta.
     if re.search(r"<!--(?:(?!-->).)*(?:P\.O\.D\.E|pitangus)(?:(?!-->).)*-->", html, re.I | re.S):
         achados.append("comentario no topo")
     return achados
