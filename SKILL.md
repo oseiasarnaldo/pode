@@ -75,6 +75,59 @@ E decida:
 
 ---
 
+## Os olhos: resolva no primeiro minuto, não no meio do caminho
+
+Você consegue escrever uma página inteira sem enxergar ela. Mas sem enxergar,
+você escreve no escuro: não mede contraste, não vê o que quebrou no celular, não
+roda auditoria. Quase todo defeito real passa em revisão de código e só aparece
+na tela.
+
+**Cheque isso na abertura, junto com o estado do projeto.** Se as suas
+ferramentas de navegador não estiverem disponíveis, resolva agora.
+
+**O motivo de ser agora e não depois é prático:** o navegador só entra no ar pra
+você quando a sessão começa. Se deixar pra instalar no meio do trabalho, a
+pessoa vai ter que reiniciar a conversa no meio do projeto dela, e isso é muito
+pior do que fazer no primeiro minuto.
+
+### Como oferecer
+
+Sem jargão, e com a escolha na mão dela:
+
+> Antes de começar: eu consigo trabalhar sem enxergar a página, mas fica pela
+> metade. Com um ajuste de dois minutos eu passo a abrir a sua página, medir
+> contraste, testar no celular e rodar auditoria sozinho. Quer fazer agora?
+> Depois é pior, porque a gente tem que parar no meio.
+
+Se ela topar, faça nesta ordem:
+
+1. **Abra o Chrome com a porta de depuração.** Perfil separado é de propósito:
+   extensão contamina medição, e num caso real uma sozinha somou 650 ms de
+   processamento e mascarou o diagnóstico inteiro.
+2. **Registre o navegador** com `claude mcp add chrome-devtools`, apontando pro
+   endereço local de depuração.
+3. **Teste.** Peça uma captura de tela de qualquer página.
+4. **Se as ferramentas ainda não responderem**, é porque elas entram quando a
+   sessão começa: peça pra ela sair e entrar de novo, e diga que na volta você
+   continua de onde parou (o `PROJETO.md` garante isso).
+
+O detalhe de cada comando está em `setup-ambiente/references/ferramentas.md`,
+camada 2.
+
+### Se ela não quiser, siga
+
+Não insista e não repita a oferta a cada etapa. Trabalhe sem os olhos, e avise
+uma vez, quando fizer diferença de verdade:
+
+> Terminei o visual. Sem enxergar a página, eu não consigo garantir contraste
+> nem testar no celular: isso ficou por sua conta, ou a gente resolve os dois
+> minutos agora.
+
+**Nunca trave o método por causa disso.** Uma página feita sem os olhos ainda é
+uma página, e a pessoa comprou pra ter a página.
+
+---
+
 ## Projeto novo: três perguntas, e só três
 
 Cabem numa tela. Faça as três juntas, e diga o que vem depois.
@@ -310,6 +363,7 @@ Pasta: <o caminho de verdade, o que o `pwd` devolveu>
 Tipo: do zero | uplift (mantém: copy? imagens?)
 Modo: passo a passo | automático
 Etapa atual: setup | P | O | D | E | no ar
+Olhos: sim | dispensou | pendente de reiniciar
 Atualizado: <data>
 
 ## Briefing
@@ -377,6 +431,7 @@ carregam sozinhas quando o assunto aparece. Se precisar puxar à mão:
 
 ## Checklist da condução
 
+- [ ] Olhos checados na abertura, e a resposta dela gravada no `PROJETO.md`
 - [ ] Estado do disco checado antes da primeira pergunta
 - [ ] Retomada tratada como retomada, com o `PROJETO.md` lido inteiro
 - [ ] No máximo três perguntas por vez, sempre
