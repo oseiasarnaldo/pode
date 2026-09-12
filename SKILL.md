@@ -101,13 +101,20 @@ Sem jargão, e com a escolha na mão dela:
 
 Se ela topar, faça nesta ordem:
 
-1. **Abra o Chrome com a porta de depuração.** Perfil separado é de propósito:
+1. **Recomende o Chrome Canary, não o Chrome de todo dia.** O Canary tem o
+   ícone amarelo, instala do lado do Chrome normal sem substituir nada, e essa
+   diferença de cor é justamente o ponto: a pessoa bate o olho na barra e sabe
+   qual janela é a de trabalho. Se ela não tiver, o download é
+   `google.com/chrome/canary`. Não trave por causa disso: se ela preferir o
+   Chrome normal, funciona igual, o que muda é a chance de confusão.
+2. **Abra ele com a porta de depuração.** Perfil separado é de propósito:
    extensão contamina medição, e num caso real uma sozinha somou 650 ms de
-   processamento e mascarou o diagnóstico inteiro.
-2. **Registre o navegador** com `claude mcp add chrome-devtools`, apontando pro
+   processamento e mascarou o diagnóstico inteiro. Somado ao ícone amarelo, a
+   janela de trabalho fica impossível de confundir com a pessoal.
+3. **Registre o navegador** com `claude mcp add chrome-devtools`, apontando pro
    endereço local de depuração.
-3. **Teste.** Peça uma captura de tela de qualquer página.
-4. **Se as ferramentas ainda não responderem**, é porque elas entram quando a
+4. **Teste.** Peça uma captura de tela de qualquer página.
+5. **Se as ferramentas ainda não responderem**, é porque elas entram quando a
    sessão começa: peça pra ela sair e entrar de novo, e diga que na volta você
    continua de onde parou (o `PROJETO.md` garante isso).
 

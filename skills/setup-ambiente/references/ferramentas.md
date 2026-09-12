@@ -62,21 +62,41 @@ tudo na mão.
 É a camada com melhor relação entre esforço e ganho: **quase todo defeito real
 passa em revisão de código e só aparece na tela.**
 
-### Chrome com porta de depuração
+### Chrome Canary com porta de depuração
 
-O Chrome precisa rodar com uma porta aberta pro agente conversar com ele:
+**Use o Chrome Canary, não o seu Chrome de todo dia.** Ele se instala do lado
+do Chrome normal, sem substituir nada, e tem o **ícone amarelo**: você bate o
+olho na barra e sabe qual janela é a de trabalho e qual é a sua. Parece
+detalhe, mas é o que evita você fechar a janela errada no meio de uma medição,
+ou ficar procurando aba de trabalho no meio das suas quinze abas pessoais.
+
+Download em `google.com/chrome/canary`.
+
+O navegador precisa rodar com uma porta aberta pro agente conversar com ele:
 
 ```bash
 # macOS
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary \
   --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-debug" &
 ```
 
-No Windows o caminho do Chrome muda, o resto é igual. O `--user-data-dir`
-separado é proposital: ele abre um perfil limpo, sem as suas extensões.
+```powershell
+# Windows
+& "$env:LOCALAPPDATA\Google\Chrome SxS\Application\chrome.exe" `
+  --remote-debugging-port=9222 --user-data-dir="$env:USERPROFILE\.chrome-debug"
+```
+
+O `--user-data-dir` separado é proposital: ele abre um perfil limpo, sem as
+suas extensões.
 
 **Isso importa mais do que parece.** Extensão contamina medição: num caso real,
 uma sozinha somou 650 ms de processamento e mascarou o diagnóstico inteiro.
+
+**Se você não quiser instalar o Canary**, o Chrome normal funciona igual: é só
+trocar o caminho no comando acima por
+`/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome` (no Windows,
+`Chrome SxS` vira `Chrome`). O que você perde é a cor que separa as duas
+janelas. No Linux não existe Canary: use o Chrome ou o Chromium mesmo.
 
 ### O MCP
 
@@ -158,7 +178,7 @@ Na ordem, porque resolve a maioria dos casos:
 
 - [ ] Camada 1 fechada: página criada e aberta no navegador
 - [ ] Camada 2, se for usar verificação: captura de tela voltou
-- [ ] Chrome de depuração em perfil separado, sem extensão
+- [ ] Canary (ou Chrome) de depuração em perfil separado, sem extensão
 - [ ] Camada 3, se for usar arte própria: `ffmpeg -version` responde
 - [ ] Camada 4: sei entrar no painel e achar a pasta raiz
 - [ ] Cada teste passou antes de avançar

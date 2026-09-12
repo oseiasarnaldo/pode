@@ -49,16 +49,20 @@ opções que o método usa. Escrever `curl.exe` chama o programa de verdade.
 
 ---
 
-## Camada 2 · Chrome com porta de depuração
+## Camada 2 · Chrome Canary com porta de depuração
 
-O caminho do Chrome muda, o resto é igual:
+**Prefira o Canary** (`google.com/chrome/canary`): ele convive com o seu Chrome
+normal e tem o ícone amarelo, então você nunca confunde a janela de trabalho
+com a sua.
 
 ```powershell
-& "$env:ProgramFiles\Google\Chrome\Application\chrome.exe" `
+& "$env:LOCALAPPDATA\Google\Chrome SxS\Application\chrome.exe" `
   --remote-debugging-port=9222 --user-data-dir="$env:USERPROFILE\.chrome-debug"
 ```
 
-Se não achar ali, tente `${env:ProgramFiles(x86)}`. Depois, o MCP é idêntico:
+Se preferir o Chrome comum, o caminho é
+`$env:ProgramFiles\Google\Chrome\Application\chrome.exe`, e se não achar ali,
+tente `${env:ProgramFiles(x86)}`. Depois, o MCP é idêntico:
 
 ```
 claude mcp add chrome-devtools npx chrome-devtools-mcp@latest --browser-url=http://127.0.0.1:9222
@@ -183,7 +187,7 @@ sim.
 
 - [ ] Git for Windows instalado, e o Git Bash aberto como terminal do método
 - [ ] `claude --version` respondendo
-- [ ] Caminho do Chrome conferido, se for usar a camada 2
+- [ ] Caminho do Chrome Canary (ou do Chrome) conferido, se for usar a camada 2
 - [ ] `py -m pip` funcionando, se for usar a camada 3
 - [ ] `ffmpeg -version` e `cwebp -version` respondendo, se for usar mídia
 - [ ] Terminal fechado e reaberto depois de cada instalação

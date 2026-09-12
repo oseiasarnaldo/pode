@@ -177,12 +177,12 @@ que ele está ali.
 
 ## O que fica de fora, de propósito
 
-As camadas 2, 3 e 4 do setup (Chrome com MCP, mídia, hospedagem) **não** entram
+As camadas 2, 3 e 4 do setup (Chrome Canary com MCP, mídia, hospedagem) **não** entram
 aqui. Elas entram quando fazem falta:
 
 | Camada | Quando ela aparece |
 |---|---|
-| Chrome com MCP | na letra D, quando for medir a página |
+| Chrome Canary com MCP | na letra D, quando for medir a página |
 | ffmpeg e chave de API | na letra D, quando for gerar arte |
 | Acesso da hospedagem | na letra E, quando for publicar |
 

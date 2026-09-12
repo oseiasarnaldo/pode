@@ -18,8 +18,9 @@ Se você for instalar **uma** coisa, instale esta. É o que permite ao Claude ve
 e medir a página, em vez de escrever código no escuro.
 
 ```bash
-# 1. Chrome com porta de debug (deixe rodando)
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+# 1. Chrome Canary com porta de debug (deixe rodando)
+#    o icone amarelo e o que separa a janela de trabalho da sua
+/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary \
   --remote-debugging-port=9222 --user-data-dir="$HOME/.chrome-debug" &
 
 # 2. o MCP
@@ -27,7 +28,9 @@ claude mcp add chrome-devtools \
   npx chrome-devtools-mcp@latest --browser-url=http://127.0.0.1:9222
 ```
 
-No Windows, o caminho do Chrome muda, o resto é igual.
+No Windows, o caminho muda, o resto é igual: veja
+`../../setup-ambiente/references/ferramentas.md`, camada 2. Sem o Canary
+instalado, o Chrome comum serve, trocando só o caminho.
 
 As duas funções que mais entregam:
 

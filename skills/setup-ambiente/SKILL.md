@@ -47,7 +47,7 @@ e você só passa pra próxima quando esbarrar no limite dela.
 | Camada | O que instala | O que você já consegue fazer |
 |---|---|---|
 | **1 · Essencial** | terminal e Claude Code | página inteira, do zero ao HTML pronto |
-| **2 · Verificação** | Chrome com MCP | o agente vê e mede a página, em vez de escrever no escuro |
+| **2 · Verificação** | Chrome Canary com MCP | o agente vê e mede a página, em vez de escrever no escuro |
 | **3 · Mídia** | ffmpeg, webp, chave de API | imagem e vídeo próprios, sem banco de imagem |
 | **4 · Publicação** | acesso da hospedagem | a página sai do computador e vai pro ar |
 
@@ -82,8 +82,10 @@ gerar outra.
    com conversar do que com programar.
 2. **Claude Code.** O agente em si.
 3. **A pasta do projeto.** Uma pasta por página, e o agente trabalha dentro dela.
-4. **Chrome com MCP.** Aqui o agente ganha olhos: ele abre a página, mede
-   contraste, testa no celular e roda auditoria sozinho.
+4. **Chrome Canary com MCP.** Aqui o agente ganha olhos: ele abre a página,
+   mede contraste, testa no celular e roda auditoria sozinho. O Canary convive
+   com o seu Chrome e tem ícone amarelo, então a janela de trabalho nunca se
+   confunde com a pessoal.
 5. **Mídia e API**, quando você chegar na letra D e quiser arte própria.
 6. **Acesso da hospedagem**, quando chegar na letra E.
 
@@ -146,7 +148,7 @@ Depois da checklist vêm três linhas: **a decisão** que isso trava e o porquê
 - [ ] Terminal aberto e funcionando
 - [ ] Claude Code instalado e rodando numa pasta de projeto
 - [ ] Uma página de teste criada e aberta no navegador
-- [ ] Chrome com MCP conectado, se for usar verificação automática
+- [ ] Chrome Canary com MCP conectado, se for usar verificação automática
 - [ ] Chaves de API no cofre, nunca no projeto
 - [ ] Testado cada passo antes de avançar pro próximo
 - [ ] Pronto pra ir pra `projetar`
